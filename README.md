@@ -7,10 +7,10 @@ Este es un proyecto de página web diseñado para un grupo musical mexicano. El 
 ## Características
 
 - **Biografía del Grupo:** Conoce la historia de Conjunto Zacatecas y los miembros de la banda.
-- **Discografía:** Explora nuestros álbumes y canciones más recientes con enlaces para escuchar en línea.
+- **Discografía:** Explora los álbumes y canciones más recientes con enlaces para escuchar en línea.
 - **Calendario de Eventos:** Consulta las próximas presentaciones y eventos en vivo.
-- **Galería:** Disfruta de fotos y videos exclusivos de nuestras actuaciones y sesiones de grabación.
-- **Contacto:** Ponte en contacto con nosotros para consultas de prensa, colaboraciones, o simplemente para saludar.
+- **Galería:** Disfruta de fotos y videos exclusivos de sus actuaciones y sesiones de grabación.
+- **Contacto:** Ponte en contacto con ellos para consultas de prensa, colaboraciones, negocios, o simplemente para saludar.
 
 ## Tecnologías Utilizadas
 
