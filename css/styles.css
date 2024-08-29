@@ -13,18 +13,35 @@ body{
 
 .header{
     width: 100%;
-    padding: 20px 100px;
+    padding: 35px 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     align-items: center;
-    background: #515151;
+    background:transparent;
     color: #fff;
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
     position: fixed;
     top: 0;
     left:0;
     z-index: 1000;
+
+}
+.header .logo{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar{
+    letter-spacing: 4px;
+}
+.navbar a{
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover{
+    color: #f1c40f;
 }
