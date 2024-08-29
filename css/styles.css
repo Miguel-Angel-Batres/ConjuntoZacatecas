@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height:100vh;
+    background: url(https://wallpapers.com/images/hd/vintage-black-hd-desktop-2i0t7uzgmn3fchnm.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header{
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #515151;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1000;
+}
