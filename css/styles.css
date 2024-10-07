@@ -22,8 +22,9 @@ body {
   padding: 35px 100px;
   display: flex;
   justify-content: space-evenly;
+  background : rgb(0, 0, 0);
+  flex-direction: row;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9); /* Para que sea visible el header */
   color: #fff;
   font-size: 15px;
   font-weight: 600;
@@ -35,6 +36,28 @@ body {
 
 }
 
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+  ;
+  }
+  .navbar {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .integrantes{
+    flex-direction: column;
+  }
+  .team_presentation{
+    margin-top: 15rem !important;
+  }
+  .integrante{
+    width: auto !important;
+  }
+
+}
 .header .logo {
   color: #fff;
   text-decoration: none;
@@ -42,6 +65,7 @@ body {
 
 .navbar {
   letter-spacing: 4px;
+  display: flex;
 }
 
 .navbar a {
@@ -57,22 +81,33 @@ body {
 
 /* CONOCENOS */
 .integrantes {
-  margin-top: 5rem;
+  
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   padding: 20px;
+}
+.team_presentation{
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team_presentation{
+  margin-top: 8rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .integrante {
   margin: 20px;
-  width: calc(33.33% - 20px);
+  width: calc(20.33% - 20px);
   text-align: center;
 }
 
 .integrante img {
   width: 100%;
-  height: 350px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
