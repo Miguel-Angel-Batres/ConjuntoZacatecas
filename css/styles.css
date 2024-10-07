@@ -1,85 +1,160 @@
-:root{
-    --blanco:  #FFFFFF;
+:root {
+  --blanco: #FFFFFF;
 }
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    min-height:100vh;
-    background: url(https://wallpapers.com/images/hd/vintage-black-hd-desktop-2i0t7uzgmn3fchnm.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.header{
-    width: 100%;
-    padding: 35px 100px;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    background:transparent;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    position: fixed;
-    top: 0;
-    left:0;
-    z-index: 1000;
-
-}
-.header .logo{
-    color: #fff;
-    text-decoration: none;
-}
-.navbar{
-    letter-spacing: 4px;
-}
-.navbar a{
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease;
+body {
+  min-height: 100vh;
+  background: url(https://wallpapers.com/images/hd/vintage-black-hd-desktop-2i0t7uzgmn3fchnm.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.navbar a:hover{
-    color: #f1c40f;
+.header {
+  width: 100%;
+  padding: 35px 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+}
+
+.header .logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar {
+  letter-spacing: 4px;
+}
+
+.navbar a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f1c40f;
 }
 
 /* CONOCENOS */
 .integrantes {
-    margin-top: 5rem;
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .integrante {
-    margin: 20px;
-    width: calc(33.33% - 20px);
-    text-align: center;
-  }
-  
-  .integrante img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .integrante h3 {
-    font-size: 18px;
-    color: var(--blanco);
-    margin-top: 10px;
-  }
-  
-  .integrante p {
-    font-size: 14px;
-    color: #666;
-  }
+  margin-top: 5rem;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  padding: 20px;
+}
+
+.integrante {
+  margin: 20px;
+  width: calc(33.33% - 20px);
+  text-align: center;
+}
+
+.integrante img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.integrante h3 {
+  font-size: 18px;
+  color: var(--blanco);
+  margin-top: 10px;
+}
+
+.integrante p {
+  font-size: 14px;
+  color: #666;
+}
+
+/*CONTACTO*/
+.formulario {
+  width: 50%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex-basis: 48%;
+  position: relative;
+}
+
+.form-group.full-width {
+  flex-basis: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-bottom: 2px solid #f9aa16;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.required {
+  color: red;
+  /* Asterisco color rojo*/
+}
