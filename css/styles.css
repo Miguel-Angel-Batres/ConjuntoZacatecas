@@ -37,17 +37,16 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background: url(https://wallpapers.com/images/hd/vintage-black-hd-desktop-2i0t7uzgmn3fchnm.jpg) no-repeat;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(https://marketplace.canva.com/EAE_sP9CqRI/1/0/900w/canva-fondo-de-pantalla-celular-floral-negro-9ciL7PKr8wM.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
   }
   .header {
     flex-direction: column;
-  
   }
   .navbar {
-    margin-top: 30px;
     flex-direction: column;
     align-items: center;
   }
