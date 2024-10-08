@@ -59,6 +59,11 @@ body {
   }
   .container{
     grid-template-columns: 1fr !important;
+    margin: auto;
+  }
+
+  .card img{
+    width: 18rem !important;
   }
   .container_album{
     grid-template-columns: 1fr !important;
@@ -227,7 +232,6 @@ footer{
 .card img{
   width: 22rem;
   height: 15rem;
-
   border-radius: 3rem;
 }
 
