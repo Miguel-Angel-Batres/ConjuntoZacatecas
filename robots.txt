@@ -1,0 +1,6 @@
+# Disallow all web crawlers from accessing the site
+User-agent: *
+Disallow: /
+
+# Sitemap location
+Sitemap: /sitemap.xml

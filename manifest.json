@@ -1,0 +1,33 @@
+{
+    "name": "Conjunto Zacatecas",
+    "short_name": "Conjunto Zacatecas",
+    "description": "Conjunto Zacatecas",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#d8dee9",
+    "theme_color": "#242933",
+    "icons": [
+      {
+        "src": "/img/favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "screenshots": [
+      {
+       "src": "/img/screenshot.png",
+        "sizes": "1740x1275",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "wide-screenshot"
+      },
+      {
+        "src": "/img/screenshot.png",
+         "sizes": "1740x1275",
+         "type": "image/png",
+         "form_factor": "narrow",
+         "label": "narrow-screenshot"
+       }
+    ]
+  }
+  

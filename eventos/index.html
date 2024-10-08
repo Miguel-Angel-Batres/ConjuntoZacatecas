@@ -1,64 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conjunto Zacatecas</title>
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" defer></script>
+    <style>
+        #atcb-reference {
+          display: none !important;
+        }
+        add-to-calendar-button {
+            display: inline-flex !important;  
+            vertical-align: middle !important; 
+        }
+    </style> 
 </head>
 
-<body>
 
+<body>
     <header class="header">
         <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="conocenos.html">Conocenos</a>
-            <a href="discografia.html">Discografia</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="/">Inicio</a>
+            <a href="/conocenos/">Conocenos</a>
+            <a href="/discografia/">Discografia</a>
+            <a href="/eventos/">Eventos</a>
+            <a href="/contacto/">Contacto</a>
         </nav>
     </header>
-    <main>
-      <div class="separador">
-        <h2>Conocenos</h2>
-        <hr>
-    </div>
-    <section class="team_presentation">
-     
-      <div class="integrantes">
-        <div class="integrante">
-          <img src="imgs/Silueta.jpg" alt="Integrante 1">
-          <h3>Nombre del Integrante 1</h3>
-          <p>Instrumento: Guitarra</p>
-          <p>Descripcion del Integrante 1...</p>
-        </div>
-
-        <div class="integrante">
-          <img src="imgs/Silueta.jpg" alt="Integrante 2">
-          <h3>Nombre del Integrante 2</h3>
-          <p>Instrumento: Bajo</p>
-          <p>Descripcion del Integrante 2...</p>
-        </div>
-
-        <div class="integrante">
-          <img src="imgs/Silueta.jpg" alt="Integrante 3">
-          <h3>Nombre del Integrante 3</h3>
-          <p>Instrumento: Bateria</p>
-          <p>Descripcion del Integrante 3...</p>
-        </div>
-
-        <div class="integrante">
-          <img src="imgs/Silueta.jpg"Integrante 4">
-          <h3>Nombre del Integrante 4</h3>
-          <p>Instrumento: Bateria</p>
-          <p>Descripcion del Integrante 4...</p>
-        </div>
-          
-      </section>
-    </main>
-    
-      <footer>
+   
+    <add-to-calendar-button 
+    name="Conjunto Zacatecas"
+    description="Conjunto Zacatecas"
+    startDate="2024-08-19"
+    startTime="14:00"
+    endDate="2024-11-29"
+    endTime="16:00"
+    iCalFileName="ConjuntoZacatecas"
+    options="'Apple','Google','Outlook.com','Microsoft365'"
+    listStyle="overlay"
+    trigger="click"
+    hideBackground
+    label="Agregar al calendario"
+    lightMode="bodyScheme"
+    pastDateHandling="hide"></add-to-calendar-button>
+    <footer>
         <p>Siguenos en:</p>
         <div>
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#985B00" fill="none" stroke-linecap="round" stroke-linejoin="round">
