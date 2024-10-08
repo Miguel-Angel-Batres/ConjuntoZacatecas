@@ -144,7 +144,24 @@ body {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+}
+
+.botones button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   gap: 10px;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .btn-whatsapp svg {
@@ -154,28 +171,17 @@ body {
 
 }
 
+.btn-correo {
+  background-color: #007BFF;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
 .btn-correo svg {
   width: 24px;  
   height: 24px;
   vertical-align: middle;  
-}
-
-.botones button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-whatsapp {
-  background-color: #25D366;
-  color: white;
-}
-
-.btn-correo {
-  background-color: #007BFF;
-  color: white;
 }
 
 .btn-whatsapp:hover,
