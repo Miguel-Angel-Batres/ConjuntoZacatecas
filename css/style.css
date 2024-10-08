@@ -137,7 +137,10 @@ hr{
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+.redes_sociales_links{
+  text-decoration: none;
+  color: inherit;
+}
 .integrante {
   padding: 20px;
   width: 12rem;
