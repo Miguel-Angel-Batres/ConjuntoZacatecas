@@ -62,7 +62,8 @@ body {
   }
 
   .card img{
-    width: 18rem !important;
+    width: 15rem !important;
+    height: 10rem !important;
   }
   .container_album{
     grid-template-columns: 1fr !important;
