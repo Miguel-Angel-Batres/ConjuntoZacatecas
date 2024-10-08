@@ -233,74 +233,105 @@ footer{
 
 
 /*-------------------CONTACTO---------------*/
-.formulario {
-  width: 50%;
+.contactanos {
+  max-width: 600px;
   margin: 50px auto;
-  margin-top: 12rem;
-  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10rem;
+  background-color: var(--blanco);
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactanos h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.botones button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.btn-whatsapp svg {
+  width: 24px;  
+  height: 24px;
+  vertical-align: middle;
+
+}
+
+.btn-correo {
+  background-color: #007BFF;
+  color: white;
   color: #000;
 }
 
 form {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
 }
 
-.form-group {
-  flex-basis: 48%;
-  position: relative;
+.btn-correo svg {
+  width: 24px;  
+  height: 24px;
+  vertical-align: middle;  
 }
 
-.form-group.full-width {
-  flex-basis: 100%;
+.btn-whatsapp:hover,
+.btn-correo:hover {
+  opacity: 0.9; 
+}
+
+.contenedor-formulario {
+  display: none;
+  margin-top: 20px;
+}
+
+.contenedor-formulario.activo {
+  display: block;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: bold;
+  color: #333;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 2px solid #000;
-  outline: none;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-bottom: 2px solid #f9aa16;
-}
-
-textarea {
-  resize: none;
-  height: 100px;
-}
-
-button {
-  position: relative;
-  display: inline-block;
-  margin: 15px;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 18px;
-  text-decoration: none;
+input[type="submit"] {
+  background-color: #333;
+  color: white;
   cursor: pointer;
-  border: 2px solid;
-  border-radius: 10px;
+  border: none;
 }
 
-.required {
-  color: red;
-  /* Asterisco color rojo*/
+input[type="submit"]:hover {
+  background-color: #555;
 }
