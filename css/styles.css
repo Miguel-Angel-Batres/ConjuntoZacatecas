@@ -1,5 +1,5 @@
 :root {
-  --blanco: #FFFFFF;
+  --blanco: #cdcdcd;
 }
 * {
   margin: 0;
@@ -24,7 +24,7 @@ body {
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
-  color: #FFFFFF;
+  color: #cdcdcd;
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -53,6 +53,7 @@ body {
   .integrantes{
     flex-direction: column;
   }
+
   .logobanda img{
     width: 15rem !important;
   }
@@ -69,14 +70,27 @@ body {
     grid-template-columns: 1fr !important;
     
   }
+  .carrusel_item{
+    flex-direction: column !important;
+  }
+  .carrusel_item img{
+    width: 10rem !important;
+  }
+  .carrusel_button {
+    padding: 0 !important;
+
+  }
+  .carrusel_text{
+    display: none;
+  }
   .container_album img{
     width: 13rem !important;
   }
   h2{
     font-size: 2rem !important;
   }
-  .team_presentation{
-    margin-top: 15rem !important;
+  main{
+    gap:0.5rem !important;
   }
   .integrante{
     width: auto !important;
@@ -84,11 +98,11 @@ body {
 
 }
 .header .logo {
-  color: #fff;
+  color: #cdcdcd;
   text-decoration: none;
 }
 hr{
-  border: 1px #fff transparent;
+  border: 1px #cdcdcd transparent;
 }
 .navbar {
   letter-spacing: 4px;
@@ -97,7 +111,7 @@ hr{
 
 .navbar a {
   margin: 0 10px;
-  color: #fff;
+  color: #cdcdcd;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -113,28 +127,28 @@ hr{
   padding: 20px;
 }
 .team_presentation{
-  background-color: rgba(68, 68, 68, 0.142);
+  background-color: rgba(0, 0, 0, 0.405); 
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: #cdcdcd;
   text-align: center;
   margin-bottom: 20px;
-  padding-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .integrante {
-  margin: 20px;
-  width: calc(20.33% - 20px);
+  padding: 20px;
+  width: 12rem;
   text-align: center;
 }
 
 .integrante img {
   width: 100%;
-  height: 200px;
+  height: 10rem;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5rem;
 }
 
 .integrante h3 {
@@ -152,7 +166,7 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-  color: #FFFFFF;
+  color: #cdcdcd;
   text-align: center;
 }
 .logobanda img{
@@ -211,11 +225,11 @@ main{
 }
 footer{
   background-color: #000;
-  color: #fff;
+  color: #cdcdcd;
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 3rem;
   gap: 2rem;
   bottom: 0;
   left: 0;
@@ -227,7 +241,7 @@ footer{
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  color: #FFFFFF;
+  color: #cdcdcd;
 }
 .card img{
   width: 22rem;
@@ -235,6 +249,71 @@ footer{
   border-radius: 3rem;
 }
 
+
+/*-------------------DISCOGRAFIA---------------*/
+.carrusel {
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.405); 
+  display: flex; 
+  align-items: center; 
+  justify-items: center;
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel_container {
+  width: 100%;
+  padding: 2rem 0rem 2rem 0rem;
+
+}
+
+.carrusel_item {
+  display: flex; 
+  flex-direction: row;
+  gap: 3rem;  
+  align-items: center;
+  justify-content: center;
+  transition: opacity 2s ease; 
+}
+
+.carrusel_item img {
+  width: 15rem; 
+  height: auto; 
+  border-radius: 1.5rem; 
+}
+
+.carrusel_text {
+  max-width: 20rem;
+  font-size: 20px;
+  color: #333;
+}
+.carrusel_text h3{
+  color: #cdcdcd;
+}
+.carrusel_text p{
+  color: #cdcdcd;
+}
+
+.carrusel_button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+}
+
+.carrusel_button:hover {
+  background-color: rgba(200, 200, 200, 0.57);
+}
+
+.carrusel_button--left {
+  position: relative;
+
+}
+
+.carrusel_button--right {
+  position: relative;
+
+}
 
 /*-------------------CONTACTO---------------*/
 .contactanos {
