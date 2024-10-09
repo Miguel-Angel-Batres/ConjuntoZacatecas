@@ -447,7 +447,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #555;
 }
-
+textarea {
+  resize: vertical;
+  max-height: 10rem;
+  min-height: 5rem;
+}
 /* Responsive Contacto */
 @media (max-width: 768px) {
   .container {
