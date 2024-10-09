@@ -53,17 +53,12 @@ main{
     background-attachment: fixed;
 
   }
-  .header {
-    flex-direction: column;
-  }
   .navbar {
-    flex-direction: column;
     align-items: center;
   }
-  .integrantes{
-    flex-direction: column;
+  .header, .navbar, .integrantes, .botones, .carrusel_item {
+    flex-direction: column !important;
   }
-
   .logobanda img{
     width: 15rem !important;
   }
@@ -85,11 +80,7 @@ main{
     margin-top: 2rem !important;
   }
   .botones{
-    flex-direction: column;
     gap: 2rem;
-  }
-  .carrusel_item{
-    flex-direction: column !important;
   }
   .carrusel_item img{
     width: 10rem !important;
