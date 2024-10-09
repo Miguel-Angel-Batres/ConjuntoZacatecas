@@ -126,6 +126,7 @@ hr{
 
 .navbar a:hover {
   color: #f1c40f;
+  text-decoration: underline;
 }
 
 /* CONOCENOS */
@@ -149,6 +150,7 @@ hr{
   text-decoration: none;
   color: inherit;
 }
+
 .integrante {
   padding: 20px;
   width: 12rem;
