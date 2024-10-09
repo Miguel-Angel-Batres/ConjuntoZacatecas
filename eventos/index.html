@@ -6,17 +6,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conjunto Zacatecas</title>
+    <link rel="preload" href="css/style.css" as="style">
+
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" ></script>
     <style>
-        #atcb-reference {
-            display: none !important;
+
+        .table-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .tabla-titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+        .concierto {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+            padding: 20px 0;
+        }
+        .concierto .fecha {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .concierto .fecha span {
+            font-size: 18px;
+            display: block;
+        }
+        .concierto .detalles {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .concierto .detalles .lugar {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .concierto .detalles .ubicacion {
+            font-size: 16px;
+            color: #aaa;
         }
 
-        add-to-calendar-button {
-            display: inline-flex !important;
-            vertical-align: middle !important;
-        }
     </style>
 </head>
 
@@ -34,10 +69,79 @@
 
 
     <main>
-        <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
+<div id="atcb-reference">Prueba</div>
+
+    <div class="table-container">
+        <div class="tabla-titulo">
+            <p>Próximos conciertos</p>
+        </div>
+        <div class="concierto">
+            <div class="fecha">
+                12<span>nov.</span>
+            </div>
+            <div class="detalles">
+                <div class="lugar">El lugar</div>
+                <div class="ubicacion">San Francisco, CA</div>
+            </div>
+            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
             startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
             options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
             label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+        </div>
+        <div class="concierto">
+            <div class="fecha">
+                14<span>nov.</span>
+            </div>
+            <div class="detalles">
+                <div class="lugar">El lugar</div>
+                <div class="ubicacion">Los Angeles, CA</div>
+            </div>
+            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
+            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
+            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
+            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+        </div>
+        <div class="concierto">
+            <div class="fecha">
+                16<span>nov.</span>
+            </div>
+            <div class="detalles">
+                <div class="lugar">El lugar</div>
+                <div class="ubicacion">Phoenix, AZ</div>
+            </div>
+            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
+            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
+            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
+            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+        </div>
+        <div class="concierto">
+            <div class="fecha">
+                18<span>nov.</span>
+            </div>
+            <div class="detalles">
+                <div class="lugar">El lugar</div>
+                <div class="ubicacion">Austin, TX</div>
+            </div>
+            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
+            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
+            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
+            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+        </div>
+        <div class="concierto">
+            <div class="fecha">
+                20<span>nov.</span>
+            </div>
+            <div class="detalles">
+                <div class="lugar">El lugar</div>
+                <div class="ubicacion">New York City, NY</div>
+            </div>
+            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
+            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
+            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
+            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+        </div>
+    </div>
+
     </main>
     <footer>
         <p>Siguenos en:</p>
@@ -72,6 +176,8 @@
         </div>
         <p>© 2024 Creado por Estudiantes de la Universidad Autonoma De Aguascalientes</p>
     </footer>
+    
+
 </body>
 
 </html>
