@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conjunto Zacatecas</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/contacto.js"></script>
 </head>
 
 <body>
@@ -20,56 +19,101 @@
         </nav>
     </header>
 
-    <div class="contactanos">
-        <h1>¡Habla con Nosotros!</h1>
+    <main>
+        <div class="separador">
+            <h2>Contacto</h2>
+            <hr>
+          </div>
+        <div class="contactanos">
+            <h1>¡Habla con Nosotros!</h1>
 
-        <!-- Botones -->
-        <div class="botones">
-            <button class="btn-whatsapp" onclick="mostrarFormulario('formulario-whatsapp')">
-                <!-- SVG de icono de WhatsApp -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24">
-                    <path fill="#ffffff"
-                        d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01" />
+            <!-- Botones -->
+            <div class="botones">
+                <button class="btn-whatsapp" onclick="mostrarFormulario('formulario-whatsapp')">
+                    <!-- SVG de icono de WhatsApp -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24">
+                        <path fill="#ffffff"
+                            d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01" />
+                    </svg>
+                    Contactar por WhatsApp</button>
+
+                <button class="btn-correo" onclick="mostrarFormulario('formulario-correo')">
+                    <!-- SVG de icono de correo -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                    </svg>
+                    Enviar un correo</button>
+            </div>
+
+            <!-- Formulario de WhatsApp -->
+            <div id="formulario-whatsapp" class="contenedor-formulario">
+                <form id="formContactoWhatsApp">
+                    <label for="mensaje-whatsapp">Mensaje para WhatsApp:</label>
+                    <textarea id="mensaje-whatsapp" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+                    <input type="submit" value="Enviar a WhatsApp">
+                </form>
+            </div>
+
+
+            <!-- Formulario de Correo -->
+            <div id="formulario-correo" class="contenedor-formulario">
+                <form id="formContactoCorreo" action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
+                    <label for="nombre-correo">Nombre:</label>
+                    <input type="text" id="nombre-correo" placeholder="Tu nombre" required>
+
+                    <label for="email-correo">Correo electrónico:</label>
+                    <input type="email" id="email-correo" placeholder="Tu correo electrónico" required>
+
+                    <label for="mensaje-correo">Mensaje:</label>
+                    <textarea id="mensaje-correo" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+
+                    <input type="submit" value="Enviar correo">
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Siguenos en:</p>
+        <div>
+            <a href="https://www.instagram.com/conjuntozacatecas/?hl=es" class="redes_sociales_links">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled"
+                    width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#985B00" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z"
+                        stroke-width="0" fill="currentColor" />
                 </svg>
-                Contactar por WhatsApp</button>
-
-            <button class="btn-correo" onclick="mostrarFormulario('formulario-correo')">
-                <!-- SVG de icono de correo -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+            </a>
+            <a href="https://www.instagram.com/conjuntozacatecas/?hl=es" class="redes_sociales_links">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="32"
+                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                    <path d="M16.5 7.5l0 .01" />
                 </svg>
-                Enviar un correo</button>
+            </a>
+            <a href="https://open.spotify.com/intl-es/artist/3YHcMTguy30GlGD1Eg5Onb" class="redes_sociales_links">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-spotify" width="32"
+                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527" />
+                    <path d="M9 15c1.5 -1 4 -1 5 .5" />
+                    <path d="M7 9c2 -1 6 -2 10 .5" />
+                </svg>
+            </a>
         </div>
+        <p>© 2024 Creado por Estudiantes de la Universidad Autonoma De Aguascalientes</p>
+    </footer>
 
-        <!-- Formulario de WhatsApp -->
-        <div id="formulario-whatsapp" class="contenedor-formulario">
-            <form id="formContactoWhatsApp">
-                <label for="mensaje-whatsapp">Mensaje para WhatsApp:</label>
-                <textarea id="mensaje-whatsapp" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
-                <input type="submit" value="Enviar a WhatsApp">
-            </form>
-        </div>
-
-
-        <!-- Formulario de Correo -->
-        <div id="formulario-correo" class="contenedor-formulario">
-            <form id="formContactoCorreo" action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
-                <label for="nombre-correo">Nombre:</label>
-                <input type="text" id="nombre-correo" placeholder="Tu nombre" required>
-
-                <label for="email-correo">Correo electrónico:</label>
-                <input type="email" id="email-correo" placeholder="Tu correo electrónico" required>
-
-                <label for="mensaje-correo">Mensaje:</label>
-                <textarea id="mensaje-correo" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
-
-                <input type="submit" value="Enviar correo">
-            </form>
-        </div>
-    </div>
-
-
+    <script src="/js/contacto.js"></script>
 </body>
 
 </html>
