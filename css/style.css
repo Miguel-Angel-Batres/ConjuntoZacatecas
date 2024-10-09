@@ -1,5 +1,7 @@
 :root {
   --blanco: #cdcdcd;
+  --negro: #1b1b1b;
+
 }
 * {
   margin: 0;
@@ -26,6 +28,21 @@ main{
   text-align: center;
 }
 
+footer{
+  background-color: #000;
+  color: #cdcdcd;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 2rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+
 
 /* --------------BARRA NAVEGACION --------------*/
 .header {
@@ -51,17 +68,20 @@ main{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
   }
+
   .navbar {
     align-items: center;
   }
+
   .header, .navbar, .integrantes, .botones, .carrusel_item {
     flex-direction: column !important;
   }
+
   .logobanda img{
     width: 15rem !important;
   }
+
   .container{
     grid-template-columns: 1fr !important;
     margin: auto;
@@ -144,43 +164,49 @@ hr{
 .integrantes {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 20px;
 }
-.team_presentation{
-  background-color: rgba(0, 0, 0, 0.405); 
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  color: #cdcdcd;
-  text-align: center;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 
+/* Estilos para cada tarjeta de integrante */
 .integrante {
-  padding: 20px;
-  width: 12rem;
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+  border: 1.3px solid #333;
+  border-radius: 8px;
+  width: 300px;
   text-align: center;
+  margin: 20px;
+  padding: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.integrante:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
 }
 
 .integrante img {
   width: 100%;
-  height: 10rem;
-  object-fit: cover;
-  border-radius: 5rem;
+  height: auto;
+  display: block;
 }
 
+/* Estilo para el nombre del integrante */
 .integrante h3 {
-  font-size: 18px;
-  color: var(--blanco);
-  margin-top: 10px;
+  font-size: 24px;
+  margin: 15px 0 5px;
+  color: #ffff;
+  font-weight: bold;
 }
 
+/* Estilo para el instrumento */
 .integrante p {
-  font-size: 14px;
-  color: #666;
+
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #bbb
+
 }
 
 .logobanda img{
@@ -236,21 +262,6 @@ hr{
 .separador hr{
   width: 80%;
   margin: auto;
-}
-
-
-footer{
-  background-color: #000;
-  color: #cdcdcd;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  gap: 2rem;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin-top: 10rem;
 }
 
 .card{
@@ -334,20 +345,22 @@ footer{
 
 /*-------------------CONTACTO---------------*/
 .contactanos {
-
-  max-width: 600px;
+  /* width: 900px;
+  height: 600px;   */
   margin: 50px auto;
   padding: 20px;
-  margin-top: 10rem;
-  background-color: var(--blanco);
+  margin-top: 1rem;
+  background-color: var(--negro);
+  /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
   border-radius: 8px;
+  border: 1.3px solid #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contactanos h1 {
   text-align: center;
   font-size: 25px;
-  color: #333;
+  color: var(--blanco);
   margin-bottom: 30px;
 }
 
@@ -355,25 +368,34 @@ footer{
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  
   gap: 40px;
 }
 
 .botones button {
-  padding: 10px 20px;
+  /* padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 10px; */
+  width: 100%; /* Asegúrate de que los botones ocupen el ancho completo */
+  padding: 10px; 
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Espaciado inferior para separar de otros elementos */
 }
 
 .btn-whatsapp {
   background-color: #25D366;
   color: white;
-  display: flex;
+  display: block;
   align-items: center;
+  /* border: 4px solid #ffffff; */
 }
 
 .btn-whatsapp svg {
@@ -386,12 +408,8 @@ footer{
 .btn-correo {
   background-color: #007BFF;
   color: white;
+  display: block;
 }
-
-/* form {
-  display: flex;
-  align-items: center;
-} */
 
 .btn-correo svg {
   width: 24px;  
@@ -417,7 +435,8 @@ footer{
 label {
   display: block;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--blanco);
+  width: 100%;
 }
 
 input, textarea {
@@ -445,6 +464,12 @@ textarea {
 }
 /* Responsive Contacto */
 @media (max-width: 768px) {
+  .contactanos {
+    width: 90%; 
+    height: auto; 
+    padding: 15px;
+  }
+
   .container {
     max-width: 90%;
     padding: 15px;
@@ -460,4 +485,26 @@ textarea {
     margin-bottom: 15px;
     width: 80%; 
   }
+
+  label{
+    width: 80%;
+    margin-bottom: 8px;
+  }
+
+  input,textarea{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    width: 80%; /* Ancho del 80% para el botón de envío */
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+
 }
