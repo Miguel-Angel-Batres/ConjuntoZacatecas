@@ -390,6 +390,12 @@ hr{
   transition: opacity 0.3s ease;
 }
 
+.lista-hover ul {
+  list-style: none;
+  padding: 0;
+}
+
+
 .imagen-container:hover .lista-hover {
   opacity: 1;
 }
@@ -442,6 +448,14 @@ hr{
 
 .btn.plataforma.deezer:hover {
   background-color: #5d29d8; 
+}
+
+.btn.plataforma.applemusic:hover {
+  background-color: #FF2D55; 
+}
+
+.btn.plataforma.amazonmusic:hover {
+  background-color: #01b4ab; 
 }
 
 
