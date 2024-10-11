@@ -401,6 +401,11 @@ iframe {
   border-radius: 3rem;
   background-size: cover;
 }
+.carousel-notext img{
+  max-width: 50%;
+  width: 100%;
+  max-height: 20rem;
+}
 
 .carousel-item .text-content {
   max-width: 25%;
