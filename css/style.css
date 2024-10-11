@@ -1,6 +1,7 @@
 :root {
   --blanco: #cdcdcd;
   --negro: #1b1b1b;
+  --btnFotosVideos: #505853;
 
 }
 * {
@@ -169,6 +170,12 @@ hr{
 }
 
 
+/* ----------------FOOTER------------------ */
+.siguenos{
+  margin-bottom: -20px;
+  font-weight: bold ;
+}
+
 .redes_sociales_links{
   text-decoration: none;
   color: inherit;
@@ -217,13 +224,77 @@ hr{
 
 /* Estilo para el instrumento */
 .integrante p {
-
   margin: 0 0 15px;
   font-size: 18px;
   color: #bbb
-
 }
 
+/* FOTOS Y VIDEOS */
+.botones-fotosvideos {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btnVideos, .btnFotos {
+  padding: 10px 20px;
+  border: 2px solid var(--btnFotosVideos);
+  background-color: transparent;
+  color: var(--btnFotosVideos);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn.activo {
+  background-color: var(--btnFotosVideos);
+  color: var(--blanco);
+}
+
+.btn:hover {
+  background-color: var(--btnFotosVideos);
+  color: var(--blanco);
+}
+
+.seccion:not(.oculto) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+.video-item, .foto-item {
+  /* background-color: #1b1b1b; */
+  padding: 1rem;
+  text-align: center;
+   width: 267px;
+  height: 476px; */
+}
+
+
+.video-item h3, .foto-item img {
+  color: var(--blanco);
+}
+/* 
+iframe {
+  width: 100%;
+  height: 200px;
+} */
+
+.foto-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.oculto {
+  display: none;
+}
+
+
+/* -------------------------------------- */
 .logobanda img{
   width: 30rem;
 }
@@ -449,7 +520,6 @@ hr{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .icono {
