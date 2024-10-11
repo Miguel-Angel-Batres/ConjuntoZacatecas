@@ -102,16 +102,7 @@ footer{
   .botones{
     gap: 2rem;
   }
-  .carrusel_item img{
-    width: 10rem !important;
-  }
-  .carrusel_button {
-    padding: 0 !important;
-
-  }
-  .carrusel_text{
-    display: none;
-  }
+  
   .container_album img{
     width: 13rem !important;
   }
@@ -125,6 +116,20 @@ footer{
     width: auto !important;
   }
 
+ 
+
+.carousel-item img {
+    width: 60% !important;
+    max-width: none; 
+    overflow: hidden;
+}
+.carousel-item .text-content {
+    display: none;
+}
+.carousel-controls button {
+    font-size: 16px;
+    padding: 0 !important; 
+}
 }
 
 .header .logo {
@@ -279,70 +284,72 @@ hr{
 
 
 /*-------------------DISCOGRAFIA---------------*/
-.carrusel {
-  width: 100%; 
-  background-color: rgba(0, 0, 0, 0.405); 
-  display: flex; 
-  align-items: center; 
-  justify-items: center;
-  padding: 20px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carrusel_container {
+.carousel-container {
   width: 100%;
-  padding: 2rem 0rem 2rem 0rem;
-
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #6c6c6c;
+  padding: 4rem 0 4rem 0;
+  background-color: rgba(0, 0, 0, 0.405);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
-.carrusel_item {
-  display: flex; 
-  flex-direction: row;
-  gap: 3rem;  
+.carousel {
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  transition: opacity 2s ease; 
+  justify-content:center;
+  gap: 2rem;
+  color: white;
 }
 
-.carrusel_item img {
-  width: 15rem; 
-  height: auto; 
-  border-radius: 1.5rem; 
+.carousel-item img {
+  width: 15rem;
+  max-width: 15rem;
+  height: auto ;
+  border-radius: 3rem;
+  background-size: cover;
 }
 
-.carrusel_text {
-  max-width: 20rem;
-  font-size: 20px;
-  color: #333;
-}
-.carrusel_text h3{
-  color: #cdcdcd;
-}
-.carrusel_text p{
-  color: #cdcdcd;
+.carousel-item .text-content {
+  max-width: 25%;
 }
 
-.carrusel_button {
+.text-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 16px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
   background-color: transparent;
-  cursor: pointer;
   border: none;
   padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
 }
-
-.carrusel_button:hover {
-  background-color: rgba(200, 200, 200, 0.57);
+.carousel-controls button:hover {
+  background-color: rgba(45, 45, 45, 0.603);
 }
-
-.carrusel_button--left {
-  position: relative;
-
-}
-
-.carrusel_button--right {
-  position: relative;
-
-}
-
 
 /* ALBUMES */
 .discografia {

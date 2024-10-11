@@ -1,27 +1,40 @@
-const items = document.querySelectorAll('.carrusel_item');
-    let currentIndex = 0; // Índice del elemento actualmente visible
+const carousel = document.querySelector('.carousel');
+const items = document.querySelectorAll('.carousel-item');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let index = 0;
+let intervalId; 
 
-    function showItem(index) {
-        // Oculta todos los elementos
-        items.forEach(item => item.style.display = 'none');
-        // Muestra el elemento activo
-        items[index].style.display = 'flex';
+function showSlide(newIndex) {
+    if (newIndex < 0) {
+        index = items.length - 1;
+    } else if (newIndex >= items.length) {
+        index = 0;
+    } else {
+        index = newIndex;
     }
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+}
 
-    function nextItem() {
-        currentIndex = (currentIndex + 1) % items.length; // Incrementa el índice y vuelve al inicio
-        showItem(currentIndex);
-    }
+function startAutoSlide() {
+    intervalId = setInterval(() => {
+        showSlide(index + 1);
+    }, 5000);
+}
 
-    function prevItem() {
-        currentIndex = (currentIndex - 1 + items.length) % items.length; // Decrementa el índice y vuelve al final si es necesario
-        showItem(currentIndex);
-    }
+startAutoSlide();
 
-    // Asocia funciones a los botones
-    document.querySelector('.carrusel_button--right').addEventListener('click', nextItem);
-    document.querySelector('.carrusel_button--left').addEventListener('click', prevItem);
-    document.addEventListener("DOMContentLoaded", function() {
-        // Asegúrate de que solo el primer elemento sea visible
-        showItem(currentIndex);
-    });
+prevBtn.addEventListener('click', () => {
+    showSlide(index - 1);
+    resetInterval(); // Reiniciar el intervalo
+});
+
+nextBtn.addEventListener('click', () => {
+    showSlide(index + 1);
+    resetInterval(); // Reiniciar el intervalo
+});
+
+function resetInterval() {
+    clearInterval(intervalId); // Detener el intervalo anterior
+    startAutoSlide(); // Iniciar un nuevo intervalo
+}
