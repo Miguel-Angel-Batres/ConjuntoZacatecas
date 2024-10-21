@@ -510,11 +510,41 @@ iframe {
 }
 
 /* BOTONES SPOTIFY,YT Y DEEZER */
-.plataformas {
+
+.contenedor-botones-musica{
+  position: relative;
+  display: inline-block;
+}
+
+.btn-escuchar-ahora{
+  background-color:  #333;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.plataformas {
+  display: none;
   justify-content: center;
   gap: 15px;
   margin-top: 10px;
+}
+
+/* Mostrar los íconos cuando el botón esté en hover */
+.contenedor-botones-musica:hover .plataformas {
+  display: flex;
+  animation: aparecer 0.3s ease forwards;
 }
 
 .btn.plataforma {
@@ -553,6 +583,15 @@ iframe {
   background-color: #01b4ab; 
 }
 
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
 
 @media (max-width: 768px) {
   .album {
