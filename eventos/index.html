@@ -9,14 +9,14 @@
     <link rel="preload" href="css/style.css" as="style">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"></script>
     <style>
-
         .table-container {
             width: 80%;
             margin: 0 auto;
             padding: 20px 0;
         }
+
         .tabla-titulo {
             display: flex;
             justify-content: space-between;
@@ -24,6 +24,7 @@
             border-bottom: 1px solid #444;
             padding-bottom: 10px;
         }
+
         .concierto {
             display: flex;
             justify-content: space-between;
@@ -31,27 +32,31 @@
             border-bottom: 1px solid #444;
             padding: 20px 0;
         }
+
         .concierto .fecha {
             font-size: 36px;
             font-weight: bold;
         }
+
         .concierto .fecha span {
             font-size: 18px;
             display: block;
         }
+
         .concierto .detalles {
             flex-grow: 1;
             padding-left: 20px;
         }
+
         .concierto .detalles .lugar {
             font-size: 18px;
             font-weight: bold;
         }
+
         .concierto .detalles .ubicacion {
             font-size: 16px;
             color: #aaa;
         }
-
     </style>
 </head>
 
@@ -70,126 +75,136 @@
 
 
     <main>
-<div id="atcb-reference">Prueba</div>
 
-    <div class="table-container">
-        <div class="tabla-titulo">
-            <p>Próximos conciertos</p>
+        <div class="separador">
+            <h2>Eventos</h2>
+            <hr>
         </div>
-        <div class="concierto">
-            <div class="fecha">
-                12<span>nov.</span>
+        <!-- <div id="atcb-reference">Prueba</div> -->
+
+        <div class="table-container">
+            <div class="tabla-titulo">
+                <p>Próximos conciertos</p>
             </div>
-            <div class="detalles">
-                <div class="lugar">El lugar</div>
-                <div class="ubicacion">San Francisco, CA</div>
+            <div class="concierto">
+                <div class="fecha">
+                    12<span>nov.</span>
+                </div>
+                <div class="detalles">
+                    <div class="lugar">El lugar</div>
+                    <div class="ubicacion">San Francisco, CA</div>
+                </div>
+                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
+                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
+                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
+                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
+                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
             </div>
-            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
-            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
-            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
-            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+            <div class="concierto">
+                <div class="fecha">
+                    14<span>nov.</span>
+                </div>
+                <div class="detalles">
+                    <div class="lugar">El lugar</div>
+                    <div class="ubicacion">Los Angeles, CA</div>
+                </div>
+                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
+                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
+                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
+                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
+                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+            </div>
+            <div class="concierto">
+                <div class="fecha">
+                    16<span>nov.</span>
+                </div>
+                <div class="detalles">
+                    <div class="lugar">El lugar</div>
+                    <div class="ubicacion">Phoenix, AZ</div>
+                </div>
+                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
+                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
+                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
+                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
+                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+            </div>
+            <div class="concierto">
+                <div class="fecha">
+                    18<span>nov.</span>
+                </div>
+                <div class="detalles">
+                    <div class="lugar">El lugar</div>
+                    <div class="ubicacion">Austin, TX</div>
+                </div>
+                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
+                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
+                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
+                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
+                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+            </div>
+            <div class="concierto">
+                <div class="fecha">
+                    20<span>nov.</span>
+                </div>
+                <div class="detalles">
+                    <div class="lugar">El lugar</div>
+                    <div class="ubicacion">New York City, NY</div>
+                </div>
+                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
+                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
+                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
+                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
+                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+            </div>
         </div>
-        <div class="concierto">
-            <div class="fecha">
-                14<span>nov.</span>
-            </div>
-            <div class="detalles">
-                <div class="lugar">El lugar</div>
-                <div class="ubicacion">Los Angeles, CA</div>
-            </div>
-            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
-            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
-            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
-            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-        </div>
-        <div class="concierto">
-            <div class="fecha">
-                16<span>nov.</span>
-            </div>
-            <div class="detalles">
-                <div class="lugar">El lugar</div>
-                <div class="ubicacion">Phoenix, AZ</div>
-            </div>
-            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
-            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
-            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
-            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-        </div>
-        <div class="concierto">
-            <div class="fecha">
-                18<span>nov.</span>
-            </div>
-            <div class="detalles">
-                <div class="lugar">El lugar</div>
-                <div class="ubicacion">Austin, TX</div>
-            </div>
-            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
-            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
-            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
-            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-        </div>
-        <div class="concierto">
-            <div class="fecha">
-                20<span>nov.</span>
-            </div>
-            <div class="detalles">
-                <div class="lugar">El lugar</div>
-                <div class="ubicacion">New York City, NY</div>
-            </div>
-            <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas" startDate="2024-08-19"
-            startTime="14:00" endDate="2024-11-29" endTime="16:00" iCalFileName="ConjuntoZacatecas"
-            options="'Apple','Google','Outlook.com','Microsoft365'" listStyle="overlay" trigger="click" hideBackground
-            label="Agregar al calendario" lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-        </div>
-    </div>
 
     </main>
-    
+
     <footer>
         <p class="siguenos">Siguenos en:</p>
         <div>
-          <a href="https://www.facebook.com/ConjuntoZacatecasOficial" class="redes_sociales_links" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-              <path fill="#ffffff"
-                d="M19.02 4.975A9.93 9.93 0 0 0 2.07 12A9.935 9.935 0 0 0 12 21.935a10 10 0 0 0 3.8-.75a10.2 10.2 0 0 0 3.22-2.16a9.934 9.934 0 0 0 0-14.05m-.7 13.34a8.92 8.92 0 0 1-5.32 2.57v-6.56h1.88a1 1 0 0 0 0-2H13v-2.74a1 1 0 0 1 1-1h1.2a1 1 0 0 0 0-2h-1.7a2.5 2.5 0 0 0-2.5 2.5v3.24H9.13a1 1 0 1 0 0 2H11v6.56a8.919 8.919 0 1 1 9.26-5.47a9.1 9.1 0 0 1-1.94 2.9" />
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/conjuntozacatecas/?hl=es" class="redes_sociales_links" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="32"
-              height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-              <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-              <path d="M16.5 7.5l0 .01" />
-            </svg>
-          </a>
-          <a href="https://open.spotify.com/intl-es/artist/3YHcMTguy30GlGD1Eg5Onb" class="redes_sociales_links"
-            target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-spotify" width="32"
-              height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-              <path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527" />
-              <path d="M9 15c1.5 -1 4 -1 5 .5" />
-              <path d="M7 9c2 -1 6 -2 10 .5" />
-            </svg>
-          </a>
-          <a href="https://www.tiktok.com/@conjuntozacatecasoficial" class="redes_sociales_links" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-              <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                color="#ffffff">
-                <path
-                  d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12" />
-                <path
-                  d="M10.536 11.008c-.82-.116-2.69.075-3.606 1.77s.007 3.459.584 4.129c.569.627 2.378 1.814 4.297.655c.476-.287 1.069-.502 1.741-2.747l-.078-8.834c-.13.973.945 3.255 4.004 3.525" />
-              </g>
-            </svg>
-          </a>
+            <a href="https://www.facebook.com/ConjuntoZacatecasOficial" class="redes_sociales_links" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="#ffffff"
+                        d="M19.02 4.975A9.93 9.93 0 0 0 2.07 12A9.935 9.935 0 0 0 12 21.935a10 10 0 0 0 3.8-.75a10.2 10.2 0 0 0 3.22-2.16a9.934 9.934 0 0 0 0-14.05m-.7 13.34a8.92 8.92 0 0 1-5.32 2.57v-6.56h1.88a1 1 0 0 0 0-2H13v-2.74a1 1 0 0 1 1-1h1.2a1 1 0 0 0 0-2h-1.7a2.5 2.5 0 0 0-2.5 2.5v3.24H9.13a1 1 0 1 0 0 2H11v6.56a8.919 8.919 0 1 1 9.26-5.47a9.1 9.1 0 0 1-1.94 2.9" />
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/conjuntozacatecas/?hl=es" class="redes_sociales_links" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="32"
+                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                    <path d="M16.5 7.5l0 .01" />
+                </svg>
+            </a>
+            <a href="https://open.spotify.com/intl-es/artist/3YHcMTguy30GlGD1Eg5Onb" class="redes_sociales_links"
+                target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-spotify" width="32"
+                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527" />
+                    <path d="M9 15c1.5 -1 4 -1 5 .5" />
+                    <path d="M7 9c2 -1 6 -2 10 .5" />
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@conjuntozacatecasoficial" class="redes_sociales_links" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        color="#ffffff">
+                        <path
+                            d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12" />
+                        <path
+                            d="M10.536 11.008c-.82-.116-2.69.075-3.606 1.77s.007 3.459.584 4.129c.569.627 2.378 1.814 4.297.655c.476-.287 1.069-.502 1.741-2.747l-.078-8.834c-.13.973.945 3.255 4.004 3.525" />
+                    </g>
+                </svg>
+            </a>
         </div>
         <p>© 2024 Creado por Estudiantes de la Universidad Autonoma De Aguascalientes</p>
-      </footer>
+    </footer>
 
 </body>
 
