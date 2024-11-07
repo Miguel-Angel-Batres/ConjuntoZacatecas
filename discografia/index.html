@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conjunto Zacatecas</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/carrusel.js" defer></script>
+    
 </head>
 
 <body>
@@ -22,78 +22,6 @@
         </nav>
     </header>
     <main>
-        <div class="separador">
-            <h2>Albums Lanzados</h2>
-            <hr>
-        </div>
-        <!-- CARRUSEL -->
-        <div class="carousel-container">
-            <div class="carousel">
-                <!-- Slide 1 -->
-                <div class="carousel-item">
-                    <img src="https://i.scdn.co/image/ab67616d0000b27326ce66f49aa56e05cf8a46a1" alt="Imagen 1">
-                    <div class="text-content">
-                        <h2>Último Álbum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis esse laboriosam incidunt.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <img src="https://cdns-images.dzcdn.net/images/cover/069ccd425cd5cedd92beda369a306ed9/1900x1900-000000-80-0-0.jpg"
-                        alt="Imagen 2">
-                    <div class="text-content">
-                        <h2>Álbum 2</h2>
-                        <p>Asperiores adipisci aliquam, ducimus cupiditate dolor et.</p>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <img src="https://cdns-images.dzcdn.net/images/cover/0a8544e66c2617f7d5f87b3b059e6d81/1900x1900-000000-80-0-0.jpg"
-                        alt="Imagen 3">
-                    <div class="text-content">
-                        <h2>Álbum 3</h2>
-                        <p>Aspernatur nulla recusandae sequi sed at quibusdam.</p>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="carousel-item">
-                    <img src="https://m.media-amazon.com/images/I/61h-xYZLB+L._SX354_SY354_BL0_QL100__UXNaN_FMjpg_QL85_.jpg"
-                        alt="Imagen 3">
-                    <div class="text-content">
-                        <h2>Álbum 4</h2>
-                        <p>Aspernatur nulla recusandae sequi sed at quibusdam.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controles del carrusel -->
-            <div class="carousel-controls">
-                <button id="prevBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
-                        width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l14 0" />
-                        <path d="M5 12l4 4" />
-                        <path d="M5 12l4 -4" />
-                    </svg>
-                </button>
-                <button id="nextBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
-                        width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l14 0" />
-                        <path d="M15 16l4 -4" />
-                        <path d="M15 8l4 4" />
-                    </svg></button>
-            </div>
-        </div><!-----FIN DE CARRUSEL -->
-
 
         <!-- -------------------ALBUMES---------------- -->
         <div class="separador">
@@ -561,6 +489,44 @@
             <div class="separador">
                 <h2>Sencillos</h2>
                 <hr>
+            </div>
+
+            <div class="sencillo">
+                <div class="imagen-container">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273c827873b16044e71571a5bdb"
+                        alt="Roto" class="portada-sencillo">
+                </div>
+                <div class="info-album">
+                    <h2>Toxica</h2>
+                    <p>2024</p>
+                    <h3>Escuchar ahora</h3>
+                    <div class="plataformas">
+                        <a href="https://open.spotify.com/intl-es/track/1oAg4VT9SlGCfT83jqIMcg?si=pYP-YcxJSPS0zMmZD09kvg&fbclid=IwY2xjawGY4wpleHRuA2FlbQIxMAABHem3_w7yrtOQav9z5Jnm6Nk2aPzR7OM8k5vrWTM4c4vw0t4njC6w0WJ3NA_aem_tspvPmf_RQG1J376fFiFXQ&nd=1&dlsi=5c08ab4d0e044eb7"
+                            class="btn plataforma spotify" target="_blank">
+                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M17.9 10.9C14.7 9 9.35 8.8 6.3 9.75c-.5.15-1-.15-1.15-.6c-.15-.5.15-1 .6-1.15c3.55-1.05 9.4-.85 13.1 1.35c.45.25.6.85.35 1.3c-.25.35-.85.5-1.3.25m-.1 2.8c-.25.35-.7.5-1.05.25c-2.7-1.65-6.8-2.15-9.95-1.15c-.4.1-.85-.1-.95-.5s.1-.85.5-.95c3.65-1.1 8.15-.55 11.25 1.35c.3.15.45.65.2 1m-1.2 2.75c-.2.3-.55.4-.85.2c-2.35-1.45-5.3-1.75-8.8-.95c-.35.1-.65-.15-.75-.45c-.1-.35.15-.65.45-.75c3.8-.85 7.1-.5 9.7 1.1c.35.15.4.55.25.85M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=TXiSTIEMBWw"
+                            class="btn plataforma youtube" target="_blank">
+                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
+                            </svg>
+                        </a>
+                        <a href="https://www.deezer.com/mx/album/654054521" class="btn plataforma deezer"
+                            target="_blank">
+                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 48 48">
+                                <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                    d="M37.21 11.45c.36-2.091.89-3.406 1.476-3.409h.001c1.094.004 1.98 4.565 1.98 10.196s-.887 10.195-1.982 10.195c-.449 0-.863-.775-1.196-2.074c-.527 4.755-1.621 8.023-2.887 8.023c-.98 0-1.859-1.963-2.449-5.06c-.403 5.889-1.417 10.067-2.602 10.067c-.744 0-1.423-1.656-1.925-4.351c-.604 5.564-1.999 9.463-3.625 9.463s-3.025-3.898-3.626-9.463c-.499 2.695-1.177 4.35-1.924 4.35c-1.186 0-2.198-4.177-2.603-10.065c-.59 3.096-1.467 5.06-2.449 5.06c-1.265 0-2.36-3.268-2.887-8.024c-.33 1.303-.747 2.074-1.196 2.074c-1.095 0-1.983-4.564-1.983-10.195S8.221 8.04 9.316 8.04c.588 0 1.113 1.319 1.478 3.41c.584-3.607 1.533-5.951 2.605-5.951c1.273 0 2.377 3.315 2.899 8.128c.51-3.503 1.286-5.736 2.154-5.736c1.216 0 2.25 4.392 2.633 10.52c.72-3.142 1.764-5.113 2.918-5.113s2.197 1.972 2.916 5.112c.385-6.127 1.418-10.52 2.634-10.52c.867 0 1.64 2.234 2.154 5.737c.52-4.813 1.624-8.128 2.898-8.128c1.068 0 2.02 2.345 2.605 5.95ZM4.5 17.234c0-2.517.636-4.558 1.421-4.558s1.422 2.04 1.422 4.558s-.636 4.558-1.422 4.558s-1.42-2.04-1.42-4.558m36.168 0c0-2.517.634-4.558 1.416-4.558s1.416 2.04 1.416 4.558s-.634 4.558-1.416 4.558s-1.416-2.04-1.416-4.558" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="sencillo">
