@@ -1,5 +1,5 @@
 :root {
-  --blanco: #cdcdcd;
+  --blanco: #ffffff;
   --negro: #1b1b1b;
   --btnFotosVideos: #505853;
 
@@ -26,13 +26,13 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-  color: #cdcdcd;
+  color: var(--blanco);
   text-align: center;
 }
 
 footer {
   background-color: #000;
-  color: #cdcdcd;
+  color: var(--blanco);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@ footer {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  color: #cdcdcd;
+  color:var(--blanco);
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -162,12 +162,12 @@ footer {
 }
 
 .header .logo {
-  color: #cdcdcd;
+  color: var(--blanco);
   text-decoration: none;
 }
 
 hr {
-  border: 1px #cdcdcd transparent;
+  border: 1px #ffff transparent;
 }
 
 .navbar {
@@ -178,7 +178,7 @@ hr {
 }
 
 .navbar a {
-  color: #cdcdcd;
+  color: var(--blanco);
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -237,7 +237,7 @@ hr {
 .integrante h3 {
   font-size: 24px;
   margin: 15px 0 5px;
-  color: #ffff;
+  color: var(--blanco);
   font-weight: bold;
 }
 
@@ -415,7 +415,7 @@ iframe {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  color: #cdcdcd;
+  color: var(--blanco);
 }
 
 .card img {
@@ -454,7 +454,7 @@ iframe {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  color: white;
+  color: var(--blanco);
 }
 
 .carousel-item img {
@@ -549,7 +549,7 @@ iframe {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   /* Fondo oscuro */
-  color: white;
+  color: var(--blanco);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -624,7 +624,7 @@ iframe {
 .icono {
   width: 24px;
   height: 24px;
-  fill: white;
+  fill: var(--blanco);
   /* Color predeterminado del icono */
 }
 
@@ -657,168 +657,129 @@ iframe {
 
 
 /*-------------------CONTACTO---------------*/
-.contactanos {
-  /* width: 900px;
-  height: 600px;   */
-  margin: 50px auto;
-  padding: 20px;
-  margin-top: 1rem;
-  background-color: var(--negro);
-  /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
-  border-radius: 8px;
-  border: 1.3px solid #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.contactanos h1 {
+.contacto-contenedor {
   text-align: center;
-  font-size: 25px;
-  color: var(--blanco);
-  margin-bottom: 30px;
+  padding: 2rem;
 }
 
-.botones {
+.contacto-contenido {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  gap: 40px;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.botones button {
-  width: 100%;
-  /* Asegúrate de que los botones ocupen el ancho completo */
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  /* Espaciado inferior para separar de otros elementos */
+.contacto-contenido h2{
+  font-size: 1.3rem;
 }
 
-.btn-whatsapp {
-  background-color: #25D366;
-  color: white;
-  display: block;
-  align-items: center;
-  /* border: 4px solid #ffffff; */
+#formulario-contacto {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  width: 500px;
+  max-width: 90%;
 }
 
-.btn-whatsapp svg {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-
-}
-
-.btn-correo {
-  background-color: #007BFF;
-  color: white;
-  display: block;
-}
-
-.btn-correo svg {
-  width: 24px;
-  height: 24px;
-  color: white;
-  vertical-align: middle;
-}
-
-.btn-whatsapp:hover,
-.btn-correo:hover {
-  opacity: 0.9;
-}
-
-.contenedor-formulario {
-  display: none;
-  margin-top: 20px;
-}
-
-.contenedor-formulario.activo {
-  display: block;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
+#formulario-contacto h2 {
   color: var(--blanco);
-  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+
 }
 
-input,
-textarea {
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row input {
+  flex: 1; /* Permite que cada input ocupe la mitad del ancho */
+}
+
+#formulario-contacto input, #formulario-contacto textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input[type="submit"] {
   background-color: #333;
-  color: white;
-  cursor: pointer;
-  border: none;
+  color: var(--blanco);
+  font-size: 0.8rem;
 }
 
-input[type="submit"]:hover {
-  background-color: #555;
-}
-
-textarea {
+#formulario-contacto textarea {
+  height: 150px; /* Puedes ajustar la altura según tus necesidades */
   resize: vertical;
-  max-height: 10rem;
-  min-height: 5rem;
 }
 
-/* Responsive Contacto */
-@media (max-width: 768px) {
-  .contactanos {
-    width: 90%;
-    height: auto;
-    padding: 15px;
-  }
+#formulario-contacto button {
+  width: 50%;
+  padding: 10px;
+  background-color: #4c82af;
+  border: none;
+  cursor: pointer;
+  color: var(--blanco);
+  font-size: 0.8rem;
+}
 
-  .container {
-    max-width: 100%;
-    padding: 15px;
-  }
+.contacto-info {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: space-around;
+  background-color: #2a2a2a;
+  padding: 2rem;
+  width: 500px;
+  max-width: 90%;
+  color: var(--blanco);
+  gap: 1.5rem;
+}
 
-  .botones {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+.contacto-info h2{
+  margin-bottom: 1rem;
+}
 
-  .botones button {
-    margin-bottom: 15px;
-    width: 80%;
-  }
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  flex-grow: 1;
+  /* margin-bottom: 1rem; Espacio entre cada ítem */
+  text-align: center;
+}
 
-  label {
-    width: 80%;
-    margin-bottom: 8px;
-  }
+.icono-titulo {
+  display: flex;
+  align-items: center; /* Alinea el icono y el título verticalmente */
+  gap: 0.5rem; /* Espacio entre el icono y el título */
+}
 
-  input,
-  textarea {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+.info-item svg {
+  width: 24px; /* Ancho del icono */
+  height: 24px; /* Alto del icono */
+  fill: #4CAF50; 
+}
 
-  input[type="submit"] {
-    width: 80%;
-    /* Ancho del 80% para el botón de envío */
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    border: none;
-  }
+.info-item div {
+  color: #ddd; /* Color del texto */
+}
+
+.info-item strong {
+  font-size: 1.5rem;
+  color: var(--blanco); /* Color del título*/
 
 }
+
+.info-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+
+
+
 
 /*VIDEOS PAGINA DE INICIO*/
 .container_videos {
