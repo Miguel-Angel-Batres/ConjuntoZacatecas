@@ -684,9 +684,9 @@ iframe {
 }
 
 .carousel-item img {
-  width: 15rem;
-  max-width: 15rem;
-  height: auto; 
+  width: 28rem;
+  max-width: 40rem;
+  height: auto;
   background-size: cover;
 }
 
@@ -1016,11 +1016,9 @@ iframe {
 
 .video_card {
   flex: 1 1 calc(25% - 20px);
-  /* Ajusta el 25% al tamaño deseado */
   min-width: 250px;
   /* Tamaño mínimo de cada tarjeta */
   aspect-ratio: 3 / 4;
-  /* Proporción de la tarjeta */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1043,4 +1041,7 @@ iframe {
 }
 .titulo_novedades{
   margin-top: 50px;
+  font-family: "Girassol", serif;
 }
+
+
