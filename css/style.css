@@ -229,29 +229,42 @@ hr {
   padding: 20px;
 }
 
-
 /* Estilos para cada tarjeta de integrante */
 .integrante {
-  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+  position: relative;
   border: 1.3px solid #333;
-  /* border-radius: 8px; */
+  background: rgb(28,28,28); 
+  background: linear-gradient(0deg, rgba(28,28,28,1) 0%, rgba(0,0,0,1) 100%);
   width: 300px;
   text-align: center;
-  margin: 20px;
+  margin: 15px;
   padding: 0;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.integrante:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+.imagen-integrante {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  /* margin: 0 auto; */
 }
 
-.integrante img {
+.imagen-integrante img {
   width: 100%;
-  height: auto;
-  display: block;
+  object-fit: cover;
+  transition: filter 0.3s ease; 
 }
+
+.integrante:hover .imagen-integrante img {
+  filter: blur(2px); /* Aplica un desenfoque a la imagen */
+}
+
+
+.integrante img {
+  width: 250px;
+  transition: filter 0.3s ease; 
+}
+
 
 /* Estilo para el nombre del integrante */
 .integrante h3 {
@@ -268,7 +281,58 @@ hr {
   color: #bbb
 }
 
-/* TODA LA INFORMACION DEL INTEGRANTE */
+.integrante-detalles{
+  background-color: var(--negro);
+  padding: 0.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.integrante:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Overlay para el texto "Conoce más" */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Muestra el overlay solo cuando el mouse está sobre .integrante */
+.integrante:hover .overlay {
+  opacity: 1;
+}
+
+.integrante a {
+  color: inherit; /* Hereda el color del texto */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Aplica el color del texto en el hover del enlace */
+.integrante a:hover {
+  color: inherit;
+}
+
+.overlay-text {
+  position: relative;
+  top: -50px; /* Ajusta el valor para mover el texto hacia arriba */
+}
+
+
+
+/* TODA LA INFORMACION DEL INTEGRANTE AL DAR CLIC EN SU IMAGEN */
 .integrante-info{
   display: flex;
   align-items: flex-start;
@@ -283,7 +347,7 @@ hr {
 
 .detalles-integrante h2{
   font-size: 4rem;
-  margin: 4rem;
+  margin: 4rem 0;
 
 }
 
@@ -295,7 +359,7 @@ hr {
 .img-integrante img{
   width: 600px;
   height: auto;
-}
+} 
 
 .detalles-integrante h3{
   font-size: 2rem;
@@ -327,7 +391,7 @@ hr {
 }
 
 .biografia-texto.expandido{
-  max-height: 1000px;
+  max-height: 1200px;
 }
 
 #toggle-biografia {
@@ -340,8 +404,77 @@ hr {
   font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .integrante-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .detalles-integrante h2 {
+    font-size: 2.5rem; 
+    margin: 2rem 0; 
+    order:1;
+  }
 
-/* FOTOS Y VIDEOS */
+  .img-integrante img {
+    width: 100%; 
+    max-width: 500px; 
+    order:2;
+  }
+
+  .detalles-integrante p {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    order:4;
+  }
+
+  .biografia-integrante {
+    max-width: 90%;
+    order:5;
+  }
+
+  
+
+  .biografia-integrante {
+    max-width: 90%; /* Reduce el ancho de la biografía en pantallas pequeñas */
+  }
+
+  #toggle-biografia {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+
+/* @media (max-width: 480px) {
+  .detalles-integrante h2 {
+    font-size: 2rem; 
+  }
+
+  .detalles-integrante p {
+    font-size: 14px; 
+  }
+
+  .img-integrante img {
+    width: 100%; 
+    max-width: 300px; 
+  }
+
+  .biografia-integrante {
+    padding: 15px;
+    max-width: 100%; 
+  }
+
+  #toggle-biografia {
+    font-size: 14px; 
+    padding: 5px 8px;
+  }
+} */
+
+
+
+
+
+/* ----------FOTOS Y VIDEOS------------------------- */
 .botones-fotosvideos {
   display: flex;
   gap: 1rem;
