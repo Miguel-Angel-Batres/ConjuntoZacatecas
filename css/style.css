@@ -1,7 +1,9 @@
 :root {
   --blanco: #ffffff;
   --negro: #1b1b1b;
-  --btnFotosVideos: #505853;
+  --btnFotosVideos: #565756;
+  --borde: #b6b6b6;
+  --amarillo: #f1c40f;
 
 }
 
@@ -96,7 +98,7 @@ footer {
 }
 
 .navbar a:hover {
-  color: #f1c40f;
+  color: var(--amarillo);
   text-decoration: underline;
 }
 
@@ -232,7 +234,7 @@ hr {
 /* Estilos para cada tarjeta de integrante */
 .integrante {
   position: relative;
-  border: 1.3px solid #333;
+  border: 1px solid var(--borde);
   background: rgb(28,28,28); 
   background: linear-gradient(0deg, rgba(28,28,28,1) 0%, rgba(0,0,0,1) 100%);
   width: 300px;
@@ -370,8 +372,7 @@ hr {
   color: #fff;
   padding: 20px;
   /* margin-top: 20px; */
-  border: 2px solid #fff;
-  border-radius: 10px;
+  border: 1px solid var(--borde);
   text-align: center;
   max-width: 600px;
   margin: 20px auto; 
@@ -744,6 +745,8 @@ iframe {
   position: relative;
   text-align: center;
   padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
   transition: transform 0.3s ease;
   margin: 20px
     /* Espacio entre los albumes*/
@@ -759,12 +762,11 @@ iframe {
   width: 100%;
   height: auto;
   max-height: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   /* Limitar la altura de la imagen */
   object-fit: cover;
-  border: 1.3px solid #333;
+  border: 1.3px solid var(--borde);
 }
-
-
 
 .lista-hover {
   position: absolute;
@@ -840,7 +842,8 @@ iframe {
   display: inline-block;
   padding: 5px 15px;
   transition: background-color 0.3s ease;
-  background-color: #333;
+  background-color: #474747;
+  /* border: 1px solid var(--borde); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -903,7 +906,9 @@ iframe {
   background-color: #2a2a2a;
   padding: 2rem;
   width: 500px;
+  border: 1px solid var(--borde);
   max-width: 90%;
+
 }
 
 #formulario-contacto h2 {
@@ -941,7 +946,7 @@ iframe {
 #formulario-contacto button {
   width: 50%;
   padding: 10px;
-  background-color: #4c82af;
+  background-color: var(--btnFotosVideos);
   border: none;
   cursor: pointer;
   color: var(--blanco);
@@ -954,6 +959,7 @@ iframe {
   align-items: center; /* Centra los elementos horizontalmente */
   justify-content: space-around;
   background-color: #2a2a2a;
+  border: 1px solid var(--borde);
   padding: 2rem;
   width: 500px;
   max-width: 90%;
@@ -1003,9 +1009,6 @@ iframe {
 }
 
 
-
-
-
 /*VIDEOS PAGINA DE INICIO*/
 .container_videos {
   display: flex;
@@ -1020,7 +1023,6 @@ iframe {
   /* Tamaño mínimo de cada tarjeta */
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
@@ -1036,7 +1038,6 @@ iframe {
   width: 267px;
   height: 476px;
   object-fit: cover;
-  border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 .titulo_novedades{
