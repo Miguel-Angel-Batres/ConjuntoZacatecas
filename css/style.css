@@ -417,7 +417,44 @@ hr {
   cursor: pointer;
   margin-top: 10px;
   font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
+
+#toggle-biografia:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.regresar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: #ffffff;
+  padding: 15px 50px;
+  border: 1px solid var(--borde);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.regresar-btn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.regresar-btn svg {
+  margin-right: 10px; 
+  width: 24px; 
+  height: 24px;
+  vertical-align: middle; 
+}
+
+
 
 @media (max-width: 768px) {
   .integrante-info {
