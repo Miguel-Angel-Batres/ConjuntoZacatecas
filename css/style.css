@@ -544,33 +544,34 @@ iframe {
 }
 
 /* Collage */
-.row {
+.imagen{
+  width: 100%;
+}
+.column img{
+  margin-top: 5px;
+
+}
+.row{
   display: flex;
   padding: 5px;
   flex-wrap: wrap;
 }
 
-/*.foto-item{
+.column{
   flex: 25%;
   padding: 5px;
 }
-.foto-item img{
-  margin-top: 5px;
-  width: 100%;
-}*/
-/* RESPONSIVE */
-@media (max-width:800px) {
-  .foto-item {
-    flex: 50%;
+@media (max-width: 600px){
+  .column{
+    flex:100%
   }
 }
 
-@media (max-width:600px) {
-  .foto-item {
-    flex: 100%;
+@media (max-width: 800px){
+  .column{
+    flex:50%
   }
 }
-
 
 /* -------------------------------------- */
 .logobanda img {
