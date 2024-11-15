@@ -597,10 +597,15 @@ iframe {
 /* Collage */
 .imagen{
   width: 100%;
+  transition: transform 0.5s;
 }
 .column img{
   margin-top: 5px;
-
+  
+}
+.column img:hover{
+  /*filter: blur(2px);*/
+  transform:rotate(10deg) scale(1.3);
 }
 .row{
   display: flex;
@@ -623,7 +628,30 @@ iframe {
     flex:50%
   }
 }
+/*Parte ventana*/
+.light-box{
+  position: fixed;
+  top:0;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
 
+}
+
+.light-box img{
+  width: 75vw;
+  max-height: 70vh;
+}
+
+.light-box:target{
+  transform: scale(1);
+}
 /* -------------------------------------- */
 .logobanda img {
   width: 35rem;
