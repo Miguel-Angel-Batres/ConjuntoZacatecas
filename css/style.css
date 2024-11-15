@@ -1,7 +1,9 @@
 :root {
   --blanco: #ffffff;
   --negro: #1b1b1b;
-  --btnFotosVideos: #505853;
+  --btnFotosVideos: #565756;
+  --borde: #b6b6b6;
+  --amarillo: #f1c40f;
 
 }
 
@@ -96,7 +98,7 @@ footer {
 }
 
 .navbar a:hover {
-  color: #f1c40f;
+  color: var(--amarillo);
   text-decoration: underline;
 }
 
@@ -232,7 +234,7 @@ hr {
 /* Estilos para cada tarjeta de integrante */
 .integrante {
   position: relative;
-  border: 1.3px solid #333;
+  border: 1px solid var(--borde);
   background: rgb(28,28,28); 
   background: linear-gradient(0deg, rgba(28,28,28,1) 0%, rgba(0,0,0,1) 100%);
   width: 300px;
@@ -354,6 +356,20 @@ hr {
 .detalles-integrante p{
   font-size: 16px;
   margin: 5px 0;
+  /* display: inline-flex; */
+  /* align-items: center; */
+}
+
+.detalles-integrante p strong {
+  vertical-align: middle; /* Asegura que el texto en negrita esté alineado con el SVG */
+}
+
+.detalles-integrante p svg {
+  width: 24px; /* Ajusta el tamaño del SVG si es necesario */
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+  fill: currentColor; /* Hace que el ícono use el color del texto */
 }
 
 .img-integrante img{
@@ -370,8 +386,7 @@ hr {
   color: #fff;
   padding: 20px;
   /* margin-top: 20px; */
-  border: 2px solid #fff;
-  border-radius: 10px;
+  border: 1px solid var(--borde);
   text-align: center;
   max-width: 600px;
   margin: 20px auto; 
@@ -398,11 +413,49 @@ hr {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
+  border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
   margin-top: 10px;
   font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
+
+#toggle-biografia:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.regresar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: #ffffff;
+  padding: 15px 50px;
+  border: 1px solid var(--borde);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.regresar-btn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.regresar-btn svg {
+  margin-right: 10px; 
+  width: 24px; 
+  height: 24px;
+  vertical-align: middle; 
+}
+
+
 
 @media (max-width: 768px) {
   .integrante-info {
@@ -432,10 +485,8 @@ hr {
     order:5;
   }
 
-  
-
   .biografia-integrante {
-    max-width: 90%; /* Reduce el ancho de la biografía en pantallas pequeñas */
+    max-width: 90%; 
   }
 
   #toggle-biografia {
@@ -745,6 +796,8 @@ iframe {
   position: relative;
   text-align: center;
   padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
   transition: transform 0.3s ease;
   margin: 20px
     /* Espacio entre los albumes*/
@@ -760,12 +813,11 @@ iframe {
   width: 100%;
   height: auto;
   max-height: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   /* Limitar la altura de la imagen */
   object-fit: cover;
-  border: 1.3px solid #333;
+  border: 1.3px solid var(--borde);
 }
-
-
 
 .lista-hover {
   position: absolute;
@@ -841,7 +893,8 @@ iframe {
   display: inline-block;
   padding: 5px 15px;
   transition: background-color 0.3s ease;
-  background-color: #333;
+  background-color: #474747;
+  /* border: 1px solid var(--borde); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -887,31 +940,109 @@ iframe {
 .contacto-contenedor {
   text-align: center;
   padding: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .contacto-contenido {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.contacto-contenido h2{
-  font-size: 1.3rem;
-}
-
-#formulario-contacto {
+  flex-direction: column;
+  align-items: center;
   background-color: #2a2a2a;
-  padding: 2rem;
+  padding: 2rem;  
   width: 500px;
+  border: 1px solid var(--borde);
   max-width: 90%;
 }
 
-#formulario-contacto h2 {
-  color: var(--blanco);
-  text-align: center;
-  margin-bottom: 1rem;
+.contacto-contenido h2{
+  margin-bottom: 2rem;
 
+}
+
+.botones-formulario {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: transparent;
+}
+
+#btnCorreo {
+  padding: 10px 20px;
+  border: 1px solid rgb(28, 129, 196); /* Borde azul para botón de Correo */
+  background-color: transparent;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#btnWhatsapp {
+  padding: 10px 20px;
+  border: 1px solid green; /* Borde verde para botón de WhatsApp */
+  background-color: transparent;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#btnCorreo.activo {
+  background-color: rgb(16, 159, 224);
+  /* border-color: blue; */
+  color: #ffffff;
+}
+
+#btnWhatsapp.activo {
+  background-color: rgb(23, 134, 23);
+  /* border-color: green; */
+  color: #ffffff;
+}
+
+.botones-formulario button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid var(--btnFotosVideos);
+  background-color: transparent;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.botones-formulario button svg {
+  width: 24px; /* Cambia el ancho del SVG */
+  height: 24px; /* Cambia el alto del SVG */
+  fill: currentColor; /* Ajusta el color del SVG para que coincida con el color del texto */
+}
+
+.botones-formulario button.activo {
+  background-color: var(--btnFotosVideos); /* Cambia este color según tu preferencia */
+  border: 2px solid var(--btnFotosVideos);
+  color: var(--blanco);
+}
+#botonEnviar, #botonEnviarWhatsApp {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#botonEnviar.boton-azul {
+  background-color:  rgb(16, 159, 224);
+}
+
+#botonEnviarWhatsApp.boton-verde {
+  background-color: rgb(23, 134, 23);
+}
+
+#formulario-contacto, #formulario-whatsapp {
+  width: 100%;
 }
 
 .form-row {
@@ -921,10 +1052,11 @@ iframe {
 }
 
 .form-row input {
-  flex: 1; /* Permite que cada input ocupe la mitad del ancho */
+  flex: 1;
 }
 
-#formulario-contacto input, #formulario-contacto textarea {
+#formulario-contacto input, #formulario-contacto textarea,
+#formulario-whatsapp input, #formulario-whatsapp textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 1rem;
@@ -934,19 +1066,20 @@ iframe {
   font-size: 0.8rem;
 }
 
-#formulario-contacto textarea {
-  height: 150px; /* Puedes ajustar la altura según tus necesidades */
+#formulario-contacto textarea, #formulario-whatsapp textarea {
+  height: 150px;
   resize: vertical;
 }
 
-#formulario-contacto button {
-  width: 50%;
+#formulario-contacto button, #formulario-whatsapp button {
+  width: 100%;
   padding: 10px;
-  background-color: #4c82af;
+  background-color: #4CAF50;
   border: none;
   cursor: pointer;
-  color: var(--blanco);
-  font-size: 0.8rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .contacto-info {
@@ -955,6 +1088,7 @@ iframe {
   align-items: center; /* Centra los elementos horizontalmente */
   justify-content: space-around;
   background-color: #2a2a2a;
+  border: 1px solid var(--borde);
   padding: 2rem;
   width: 500px;
   max-width: 90%;
@@ -962,7 +1096,7 @@ iframe {
   gap: 1.5rem;
 }
 
-.contacto-info h2{
+.contacto-info h2 {
   margin-bottom: 1rem;
 }
 
@@ -971,7 +1105,6 @@ iframe {
   flex-direction: column;
   align-items: center; 
   flex-grow: 1;
-  /* margin-bottom: 1rem; Espacio entre cada ítem */
   text-align: center;
 }
 
@@ -993,8 +1126,7 @@ iframe {
 
 .info-item strong {
   font-size: 1.5rem;
-  color: var(--blanco); /* Color del título*/
-
+  color: var(--blanco); /* Color del título */
 }
 
 .info-item p {
@@ -1002,9 +1134,6 @@ iframe {
   font-size: 0.9rem;
   margin-top: 0.8rem;
 }
-
-
-
 
 
 /*VIDEOS PAGINA DE INICIO*/
@@ -1021,7 +1150,6 @@ iframe {
   /* Tamaño mínimo de cada tarjeta */
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
@@ -1037,7 +1165,6 @@ iframe {
   width: 267px;
   height: 476px;
   object-fit: cover;
-  border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 .titulo_novedades{
