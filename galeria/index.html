@@ -26,6 +26,43 @@
     </header>
 
     <main>
+        <div class="modal">
+            <div class="modal-content" id="modal_content">
+                <div class="modal-carousel" id="modal_carousel">
+
+                </div>
+                <div class="carousel-controls">
+                    <button onclick="prevBtn()" id="prevbutton">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                            width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M5 12l4 4" />
+                            <path d="M5 12l4 -4" />
+                        </svg>
+                    </button>
+                    <button onclick="nextBtn()" id="nextbutton">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                            width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg></button>
+                </div>
+                <button class="close-modal" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="40" height="40"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
         <div class="separador">
             <h2>Galeria</h2>
             <hr>
@@ -345,47 +382,14 @@
 
 
     <script>
-        const carousel = document.querySelector('.carousel');
-        const items = document.querySelectorAll('.carousel-item');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let index = 0;
-        let intervalId;
-
-        function showSlide(newIndex) {
-            if (newIndex < 0) {
-                index = items.length - 1;
-            } else if (newIndex >= items.length) {
-                index = 0;
-            } else {
-                index = newIndex;
-            }
-            carousel.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        function startAutoSlide() {
-            intervalId = setInterval(() => {
-                showSlide(index + 1);
-            }, 5000);
-        }
-
-        startAutoSlide();
-
-        prevBtn.addEventListener('click', () => {
-            showSlide(index - 1);
-            resetInterval(); // Reiniciar el intervalo
+        
+        var index = 0;
+        var maxindex = 0;
+        document.querySelectorAll('.imagen').forEach((imagen) => {
+            imagen.addEventListener('click', function () {
+                activegaleryviewer(this); 
+            });
         });
-
-        nextBtn.addEventListener('click', () => {
-            showSlide(index + 1);
-            resetInterval(); // Reiniciar el intervalo
-        });
-
-        function resetInterval() {
-            clearInterval(intervalId); // Detener el intervalo anterior
-            startAutoSlide(); // Iniciar un nuevo intervalo
-        }
-
         function mostrarSeccion(seccion) {
             // Ocultar todas las secciones
             document.querySelectorAll('.seccion').forEach((elemento) => elemento.classList.add('oculto'));
@@ -403,7 +407,83 @@
                 document.querySelector('.btnFotos').classList.add('activo');
             }
         }
+        function activegaleryviewer(element){
+            //activar un visor de imagenes en la galeria
+            const modal_carousel = document.querySelector('.modal-carousel');
+            const modal = document.querySelector('.modal');
+            modal.style.display = 'block';
+            const body = document.querySelector('body');
+            body.style.overflow = 'hidden';
+            //array de imagenes
+            const imagenes = document.querySelectorAll('.imagen');
+            //obtener el index de la imagen seleccionada
+            const indexelement = Array.from(imagenes).indexOf(element);
+            const maxelements = imagenes.length;
+            //se guarda el maximo de imagenes
+            maxindex = maxelements;
 
+            //posicionamos el carrousel en el index de la imagen seleccionada
+            const modalcarousel = document.querySelector('.modal-carousel');
+            index = indexelement;
+            modalcarousel.style.transform = `translateX(-${indexelement * 100}%)`;
+            
+            imagenes.forEach((imagen) => {
+                const modalcard = document.createElement('div');
+                modalcard.classList.add('modal-card');
+                const newImage = document.createElement('img');
+                newImage.src = imagen.src;
+                newImage.classList.add('imagen-modal');
+                modalcard.appendChild(newImage);
+                modal_carousel.appendChild(modalcard);
+            });            
+        }
+        function nextBtn(){
+            const modal_carousel = document.querySelector('.modal-carousel');
+            if(index < maxindex - 1){
+                index += 1;
+                modal_carousel.style.transform = `translateX(-${index * 100}%)`;
+
+                if(document.getElementById('prevbutton').style.display === 'none'){
+                    const carousel_controls = document.querySelector('.carousel-controls');
+                    carousel_controls.style.justifyContent = 'space-between';
+                    document.getElementById('prevbutton').style.display = 'block';
+                }
+            }
+            if(index === maxindex - 1){
+                document.getElementById('nextbutton').style.display = 'none';
+            }
+           
+        }
+        function prevBtn(){
+            const modal_carousel = document.querySelector('.modal-carousel');
+            if(index > 0){
+                index -= 1;
+                modal_carousel.style.transform = `translateX(-${index * 100}%)`;
+                if(document.getElementById('nextbutton').style.display === 'none'){
+                    document.getElementById('nextbutton').style.display = 'block';
+                }
+            }else{
+                document.getElementById('prevbutton').style.display = 'none';
+                const carousel_controls = document.querySelector('.carousel-controls');
+                carousel_controls.style.justifyContent = 'flex-end';
+            }
+
+        }
+        function closeModal(){
+            const modal = document.querySelector('.modal');
+            const modal_carousel = document.querySelector('.modal-carousel');
+            modal.style.display = 'none';
+            modal_carousel.innerHTML = '';
+            const body = document.querySelector('body');
+            body.style.overflow = 'auto';
+            index = 0;
+            maxindex = 0;
+            document.getElementById('nextbutton').style.display = 'block';
+            document.getElementById('prevbutton').style.display = 'block';
+            const carousel_controls = document.querySelector('.carousel-controls');
+            carousel_controls.style.justifyContent = 'space-between';
+
+        }
     </script>
 
     <!-- <script src="js/carrusel.js" defer></script> -->
