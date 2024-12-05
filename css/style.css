@@ -17,8 +17,8 @@
 body {
   min-height: 100vh;
   /* background-color: var(--negro); */
-  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-  /* background: url(https://wallpapers.com/images/hd/vintage-black-hd-desktop-2i0t7uzgmn3fchnm.jpg) no-repeat; */
+  /* background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
+  background: url(https://blackboxanalog.com/wp-content/uploads/2014/10/black-floral-texture-pattern-design-wallpaper-background.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
