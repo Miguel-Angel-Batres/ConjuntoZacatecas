@@ -1171,7 +1171,7 @@ iframe {
 #formulario-contacto button, #formulario-whatsapp button {
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: rgb(16, 159, 224);
   border: none;
   cursor: pointer;
   color: #ffffff;
