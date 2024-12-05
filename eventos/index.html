@@ -10,7 +10,21 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"></script>
+    <style>
+        .modal-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
 
+.column {
+  max-width: 800px; /* Máximo ancho para evitar que crezca demasiado */
+}
+
+
+    </style>
 </head>
 
 
@@ -74,31 +88,13 @@
             </div>
         </div>
         <div class="galeria-fotos seccion" id="fotos">
-            <section>
                 <div class="row">
                     <div class="column">
                         <img src="eventos/img/caldiciembre.jpg" alt="foto1" class="imagen">
                         <img src="eventos/img/8diciembre2024.jpg" alt="foto2" class="imagen">
                         <img src="eventos/img/7diciembre2024.jpg" alt="foto3" class="imagen">
                     </div>
-                    <div class="column">
-                        <img src="eventos/img/30noviembre2024.jpg" alt="foto4" class="imagen">
-                        <img src="eventos/img/29noviembre2024.jpg" alt="foto5" class="imagen">
-                        <img src="eventos/img/9noviembre2024.jpg" alt="foto6" class="imagen">
-
-                    </div>
-                    <div class="column">
-                        <img src="eventos/img/8noviembre2024.jpg" alt="foto14" class="imagen">
-                        <img src="eventos/img/26octubre2024.jpg" alt="foto17" class="imagen">
-
-                    </div>
-                    <div class="column">
-                        <img src="eventos/img/22septiembre2024.jpg" alt="foto20" class="imagen">
-                        <img src="eventos/img/20septiembre2024.jpg" alt="foto20" class="imagen">
-
-                    </div>
                 </div>
-            </section>
         </div>
     </main>
     <footer>
@@ -146,94 +142,94 @@
         </div>
         <p>© 2024 Todos los derechos reservados</p>
     </footer>
-
     <script>
-        var index = 0;
-        var maxindex = 0;
+        let index = 0;
+        let maxindex = 0;
+    
         document.querySelectorAll('.imagen').forEach((imagen) => {
             imagen.addEventListener('click', function () {
-                activegaleryviewer(this);
+                activateGalleryViewer(this);
             });
         });
-
-        function activegaleryviewer(element) {
-            //activar un visor de imagenes en la galeria
-            const modal_carousel = document.querySelector('.modal-carousel');
+    
+        function activateGalleryViewer(element) {
+            // Activar el visor de imágenes en la galería
+            const modalCarousel = document.querySelector('.modal-carousel');
             const modal = document.querySelector('.modal');
-            modal.style.display = 'block';
             const body = document.querySelector('body');
+    
+            // Mostrar el modal y deshabilitar el scroll del body
+            modal.style.display = 'flex';
             body.style.overflow = 'hidden';
-            //array de imagenes
-            const imagenes = document.querySelectorAll('.imagen');
-            //obtener el index de la imagen seleccionada
-            const indexelement = Array.from(imagenes).indexOf(element);
-            const maxelements = imagenes.length;
-            //se guarda el maximo de imagenes
-            maxindex = maxelements;
-
-            //posicionamos el carrousel en el index de la imagen seleccionada
-            const modalcarousel = document.querySelector('.modal-carousel');
-            index = indexelement;
-            modalcarousel.style.transform = `translateX(-${indexelement * 100}%)`;
-
-            imagenes.forEach((imagen) => {
-                const modalcard = document.createElement('div');
-                modalcard.classList.add('modal-card');
+    
+            // Obtener todas las imágenes de la galería
+            const images = document.querySelectorAll('.imagen');
+            const selectedIndex = Array.from(images).indexOf(element);
+    
+            // Establecer índices y posicionar el carrusel
+            index = selectedIndex;
+            maxindex = images.length;
+            modalCarousel.style.transform = `translateX(-${index * 100}%)`;
+    
+            // Limpiar el contenido del carrusel y añadir imágenes
+            modalCarousel.innerHTML = ''; // Asegura que no se dupliquen elementos
+            images.forEach((image) => {
+                const modalCard = document.createElement('div');
+                modalCard.classList.add('modal-card');
+    
                 const newImage = document.createElement('img');
-                newImage.src = imagen.src;
-                newImage.classList.add('imagen-modal');
-                modalcard.appendChild(newImage);
-                modal_carousel.appendChild(modalcard);
+                newImage.src = image.src;
+                newImage.classList.add('imagen-modal'); // Aplicar estilos específicos si es necesario
+    
+                modalCard.appendChild(newImage);
+                modalCarousel.appendChild(modalCard);
             });
+    
+            // Ajustar controles
+            document.getElementById('prevbutton').style.display = index === 0 ? 'none' : 'block';
+            document.getElementById('nextbutton').style.display = index === maxindex - 1 ? 'none' : 'block';
         }
+    
         function nextBtn() {
-            const modal_carousel = document.querySelector('.modal-carousel');
             if (index < maxindex - 1) {
-                index += 1;
-                modal_carousel.style.transform = `translateX(-${index * 100}%)`;
-
-                if (document.getElementById('prevbutton').style.display === 'none') {
-                    const carousel_controls = document.querySelector('.carousel-controls');
-                    carousel_controls.style.justifyContent = 'space-between';
-                    document.getElementById('prevbutton').style.display = 'block';
-                }
+                index++;
+                updateCarousel();
             }
-            if (index === maxindex - 1) {
-                document.getElementById('nextbutton').style.display = 'none';
-            }
-
         }
+    
         function prevBtn() {
-            const modal_carousel = document.querySelector('.modal-carousel');
             if (index > 0) {
-                index -= 1;
-                modal_carousel.style.transform = `translateX(-${index * 100}%)`;
-                if (document.getElementById('nextbutton').style.display === 'none') {
-                    document.getElementById('nextbutton').style.display = 'block';
-                }
-            } else {
-                document.getElementById('prevbutton').style.display = 'none';
-                const carousel_controls = document.querySelector('.carousel-controls');
-                carousel_controls.style.justifyContent = 'flex-end';
+                index--;
+                updateCarousel();
             }
-
         }
+    
+        function updateCarousel() {
+            const modalCarousel = document.querySelector('.modal-carousel');
+            modalCarousel.style.transform = `translateX(-${index * 100}%)`;
+    
+            document.getElementById('prevbutton').style.display = index === 0 ? 'none' : 'block';
+            document.getElementById('nextbutton').style.display = index === maxindex - 1 ? 'none' : 'block';
+        }
+    
         function closeModal() {
             const modal = document.querySelector('.modal');
-            const modal_carousel = document.querySelector('.modal-carousel');
-            modal.style.display = 'none';
-            modal_carousel.innerHTML = '';
+            const modalCarousel = document.querySelector('.modal-carousel');
             const body = document.querySelector('body');
+    
+            // Cerrar el modal, limpiar el contenido y reactivar el scroll
+            modal.style.display = 'none';
+            modalCarousel.innerHTML = '';
             body.style.overflow = 'auto';
+    
+            // Reiniciar índices y controles
             index = 0;
             maxindex = 0;
-            document.getElementById('nextbutton').style.display = 'block';
             document.getElementById('prevbutton').style.display = 'block';
-            const carousel_controls = document.querySelector('.carousel-controls');
-            carousel_controls.style.justifyContent = 'space-between';
-
+            document.getElementById('nextbutton').style.display = 'block';
         }
     </script>
+    
 </body>
 
 </html>
