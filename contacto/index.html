@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conjunto Zacatecas</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- <script src="js/contacto.js" defer></script> -->
 </head>
 
 <body>
@@ -120,7 +119,7 @@
             </svg>
             <strong>Correo</strong>
           </div>
-          <p>info@conjuntozacatecas.com</p>
+          <p>conjuntozacatecasoficial@gmail.com</p>
         </div>
       </div>
     </div>
@@ -215,7 +214,7 @@
       var mensaje = document.getElementById("mensaje").value;
 
       // Generar el enlace mailto
-      var mailtoLink = `mailto:info@conjuntozacatecas.com?subject=${encodeURIComponent(asunto)}&body=Nombre: ${encodeURIComponent(nombre)}%0ACorreo: ${encodeURIComponent(correo)}%0AMensaje: ${encodeURIComponent(mensaje)}`;
+      var mailtoLink = `mailto:conjuntozacatecasoficial@gmail.com?subject=${encodeURIComponent(asunto)}&body=Nombre: ${encodeURIComponent(nombre)}%0ACorreo: ${encodeURIComponent(correo)}%0AMensaje: ${encodeURIComponent(mensaje)}`;
 
       // Abrir el enlace en la misma ventana
       window.location.href = mailtoLink;
@@ -228,8 +227,8 @@
     function enviarWhatsapp() {
       var nombre = document.getElementById("nombreW").value;
       var mensaje = document.getElementById("mensajeW").value;
-      var numeroTelefono = "+524491028571"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje
-
+      var numeroTelefono = "+524969615021"; 
+      
       // Generar el enlace de WhatsApp
       var whatsappLink = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent("Hola soy: " + nombre + "\nMensaje: " + mensaje)}`;
 

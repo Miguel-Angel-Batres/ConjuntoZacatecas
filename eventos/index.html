@@ -10,54 +10,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"></script>
-    <style>
-        .table-container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
 
-        .tabla-titulo {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #444;
-            padding-bottom: 10px;
-        }
-
-        .concierto {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #444;
-            padding: 20px 0;
-        }
-
-        .concierto .fecha {
-            font-size: 36px;
-            font-weight: bold;
-        }
-
-        .concierto .fecha span {
-            font-size: 18px;
-            display: block;
-        }
-
-        .concierto .detalles {
-            flex-grow: 1;
-            padding-left: 20px;
-        }
-
-        .concierto .detalles .lugar {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .concierto .detalles .ubicacion {
-            font-size: 16px;
-            color: #aaa;
-        }
-    </style>
 </head>
 
 
@@ -83,86 +36,71 @@
             <h2>Eventos</h2>
             <hr>
         </div>
-        <!-- <div id="atcb-reference">Prueba</div> -->
+        <div class="modal">
+            <div class="modal-content" id="modal_content">
+                <div class="modal-carousel" id="modal_carousel">
 
-        <div class="table-container">
-            <div class="tabla-titulo">
-                <p>Próximos conciertos</p>
-            </div>
-            <div class="concierto">
-                <div class="fecha">
-                    12<span>nov.</span>
                 </div>
-                <div class="detalles">
-                    <div class="lugar">El lugar</div>
-                    <div class="ubicacion">San Francisco, CA</div>
+                <div class="carousel-controls">
+                    <button onclick="prevBtn()" id="prevbutton">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                            width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M5 12l4 4" />
+                            <path d="M5 12l4 -4" />
+                        </svg>
+                    </button>
+                    <button onclick="nextBtn()" id="nextbutton">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                            width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg></button>
                 </div>
-                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
-                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
-                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
-                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
-                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-            </div>
-            <div class="concierto">
-                <div class="fecha">
-                    14<span>nov.</span>
-                </div>
-                <div class="detalles">
-                    <div class="lugar">El lugar</div>
-                    <div class="ubicacion">Los Angeles, CA</div>
-                </div>
-                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
-                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
-                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
-                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
-                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-            </div>
-            <div class="concierto">
-                <div class="fecha">
-                    16<span>nov.</span>
-                </div>
-                <div class="detalles">
-                    <div class="lugar">El lugar</div>
-                    <div class="ubicacion">Phoenix, AZ</div>
-                </div>
-                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
-                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
-                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
-                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
-                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-            </div>
-            <div class="concierto">
-                <div class="fecha">
-                    18<span>nov.</span>
-                </div>
-                <div class="detalles">
-                    <div class="lugar">El lugar</div>
-                    <div class="ubicacion">Austin, TX</div>
-                </div>
-                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
-                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
-                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
-                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
-                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
-            </div>
-            <div class="concierto">
-                <div class="fecha">
-                    20<span>nov.</span>
-                </div>
-                <div class="detalles">
-                    <div class="lugar">El lugar</div>
-                    <div class="ubicacion">New York City, NY</div>
-                </div>
-                <add-to-calendar-button name="Conjunto Zacatecas" description="Conjunto Zacatecas"
-                    startDate="2024-08-19" startTime="14:00" endDate="2024-11-29" endTime="16:00"
-                    iCalFileName="ConjuntoZacatecas" options="'Apple','Google','Outlook.com','Microsoft365'"
-                    listStyle="overlay" trigger="click" hideBackground label="Agregar al calendario"
-                    lightMode="bodyScheme" pastDateHandling="hide"></add-to-calendar-button>
+                <button class="close-modal" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="40"
+                        height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
             </div>
         </div>
+        <div class="galeria-fotos seccion" id="fotos">
+            <section>
+                <div class="row">
+                    <div class="column">
+                        <img src="eventos/img/caldiciembre.jpg" alt="foto1" class="imagen">
+                        <img src="eventos/img/8diciembre2024.jpg" alt="foto2" class="imagen">
+                        <img src="eventos/img/7diciembre2024.jpg" alt="foto3" class="imagen">
+                    </div>
+                    <div class="column">
+                        <img src="eventos/img/30noviembre2024.jpg" alt="foto4" class="imagen">
+                        <img src="eventos/img/29noviembre2024.jpg" alt="foto5" class="imagen">
+                        <img src="eventos/img/9noviembre2024.jpg" alt="foto6" class="imagen">
 
+                    </div>
+                    <div class="column">
+                        <img src="eventos/img/8noviembre2024.jpg" alt="foto14" class="imagen">
+                        <img src="eventos/img/26octubre2024.jpg" alt="foto17" class="imagen">
+
+                    </div>
+                    <div class="column">
+                        <img src="eventos/img/22septiembre2024.jpg" alt="foto20" class="imagen">
+                        <img src="eventos/img/20septiembre2024.jpg" alt="foto20" class="imagen">
+
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-
     <footer>
         <p class="siguenos">Siguenos en:</p>
         <div>
@@ -209,6 +147,93 @@
         <p>© 2024 Todos los derechos reservados</p>
     </footer>
 
+    <script>
+        var index = 0;
+        var maxindex = 0;
+        document.querySelectorAll('.imagen').forEach((imagen) => {
+            imagen.addEventListener('click', function () {
+                activegaleryviewer(this);
+            });
+        });
+
+        function activegaleryviewer(element) {
+            //activar un visor de imagenes en la galeria
+            const modal_carousel = document.querySelector('.modal-carousel');
+            const modal = document.querySelector('.modal');
+            modal.style.display = 'block';
+            const body = document.querySelector('body');
+            body.style.overflow = 'hidden';
+            //array de imagenes
+            const imagenes = document.querySelectorAll('.imagen');
+            //obtener el index de la imagen seleccionada
+            const indexelement = Array.from(imagenes).indexOf(element);
+            const maxelements = imagenes.length;
+            //se guarda el maximo de imagenes
+            maxindex = maxelements;
+
+            //posicionamos el carrousel en el index de la imagen seleccionada
+            const modalcarousel = document.querySelector('.modal-carousel');
+            index = indexelement;
+            modalcarousel.style.transform = `translateX(-${indexelement * 100}%)`;
+
+            imagenes.forEach((imagen) => {
+                const modalcard = document.createElement('div');
+                modalcard.classList.add('modal-card');
+                const newImage = document.createElement('img');
+                newImage.src = imagen.src;
+                newImage.classList.add('imagen-modal');
+                modalcard.appendChild(newImage);
+                modal_carousel.appendChild(modalcard);
+            });
+        }
+        function nextBtn() {
+            const modal_carousel = document.querySelector('.modal-carousel');
+            if (index < maxindex - 1) {
+                index += 1;
+                modal_carousel.style.transform = `translateX(-${index * 100}%)`;
+
+                if (document.getElementById('prevbutton').style.display === 'none') {
+                    const carousel_controls = document.querySelector('.carousel-controls');
+                    carousel_controls.style.justifyContent = 'space-between';
+                    document.getElementById('prevbutton').style.display = 'block';
+                }
+            }
+            if (index === maxindex - 1) {
+                document.getElementById('nextbutton').style.display = 'none';
+            }
+
+        }
+        function prevBtn() {
+            const modal_carousel = document.querySelector('.modal-carousel');
+            if (index > 0) {
+                index -= 1;
+                modal_carousel.style.transform = `translateX(-${index * 100}%)`;
+                if (document.getElementById('nextbutton').style.display === 'none') {
+                    document.getElementById('nextbutton').style.display = 'block';
+                }
+            } else {
+                document.getElementById('prevbutton').style.display = 'none';
+                const carousel_controls = document.querySelector('.carousel-controls');
+                carousel_controls.style.justifyContent = 'flex-end';
+            }
+
+        }
+        function closeModal() {
+            const modal = document.querySelector('.modal');
+            const modal_carousel = document.querySelector('.modal-carousel');
+            modal.style.display = 'none';
+            modal_carousel.innerHTML = '';
+            const body = document.querySelector('body');
+            body.style.overflow = 'auto';
+            index = 0;
+            maxindex = 0;
+            document.getElementById('nextbutton').style.display = 'block';
+            document.getElementById('prevbutton').style.display = 'block';
+            const carousel_controls = document.querySelector('.carousel-controls');
+            carousel_controls.style.justifyContent = 'space-between';
+
+        }
+    </script>
 </body>
 
 </html>
