@@ -69,7 +69,7 @@
         </div>
 
         <!-- Formulario de Correo -->
-        <form id="formulario-contacto" onsubmit="enviarCorreo()" method="post">
+        <form id="formulario-contacto" onsubmit="return enviarCorreo();">
           <div class="form-row">
             <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
             <input type="email" id="correo" name="correo" placeholder="Tu Correo Electrónico" required>
@@ -78,6 +78,7 @@
           <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
           <button type="submit" id="botonEnviar">Enviar Mensaje</button>
         </form>
+        
 
         <!-- Formulario de WhatsApp (oculto inicialmente) -->
         <form id="formulario-whatsapp" style="display: none;">
@@ -88,6 +89,7 @@
           <button type="button" id="botonEnviarWhatsApp" onclick="enviarWhatsapp()">Enviar Whatsapp</button>
         </form>
       </div>
+
 
       <div class="contacto-info">
         <h2>INFORMACION DE CONTACTO</h2>
@@ -213,22 +215,22 @@
       var asunto = document.getElementById("asunto").value;
       var mensaje = document.getElementById("mensaje").value;
 
-      // Generar el enlace mailto
+      // // // Generar el enlace mailto
       var mailtoLink = `mailto:conjuntozacatecasoficial@gmail.com?subject=${encodeURIComponent(asunto)}&body=Nombre: ${encodeURIComponent(nombre)}%0ACorreo: ${encodeURIComponent(correo)}%0AMensaje: ${encodeURIComponent(mensaje)}`;
 
-      // Abrir el enlace en la misma ventana
+      // // // Abrir el enlace en la misma ventana
       window.location.href = mailtoLink;
 
       // Evitar el envío real del formulario
-      return false;
+      return false
     }
 
     // Función para enviar un mensaje de WhatsApp usando un enlace de WhatsApp
     function enviarWhatsapp() {
       var nombre = document.getElementById("nombreW").value;
       var mensaje = document.getElementById("mensajeW").value;
-      var numeroTelefono = "+524969615021"; 
-      
+      var numeroTelefono = "+524969615021";
+
       // Generar el enlace de WhatsApp
       var whatsappLink = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent("Hola soy: " + nombre + "\nMensaje: " + mensaje)}`;
 
