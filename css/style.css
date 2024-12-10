@@ -1277,33 +1277,53 @@ iframe {
 .container_videos {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 20px; /* Espacio uniforme entre las tarjetas */
   justify-content: center;
+  padding: 20px; /* Espacio alrededor del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  max-width: 1200px; /* Máximo ancho del contenedor */
 }
 
+/* Estilo de las tarjetas */
 .video_card {
-  flex: 1 1 calc(25% - 20px);
-  min-width: 250px;
-  /* Tamaño mínimo de cada tarjeta */
+  flex: 1 1 calc(25% - 20px); /* Ocupa el 25% del ancho con espacio entre ellas */
+  min-width: 250px; /* Tamaño mínimo para tarjetas más pequeñas */
   aspect-ratio: 3 / 4;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
-.video_card iframe {
-  width: 100%;
-  height: 100%;
+.video_card iframe,
+.video_card .gif {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
   border: none;
-  display: block;
 }
 
-.gif {
-  width: 267px;
-  height: 476px;
-  object-fit: cover;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+/* Diseño responsive */
+@media (max-width: 1024px) {
+  .video_card {
+    flex: 1 1 calc(33.33% - 20px); 
+  }
 }
+
+@media (max-width: 768px) {
+  .video_card {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .video_card {
+    flex: 1 1 100%; 
+  }
+}
+
 .titulo_novedades{
   margin-top: 50px;
   font-family: "Girassol", serif;
