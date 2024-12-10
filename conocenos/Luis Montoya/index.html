@@ -71,7 +71,7 @@
         
         <div class="biografia-integrante">
           <h3>Biografia</h3>
-          <p class="biografia-texto">Luis Mario Montoya Silva, nació el 5 de noviembre de 1986. Desde muy pequeño mostró
+          <p class="biografia-texto"> <strong>Luis Mario Montoya Silva </strong>,nació el 5 de noviembre de 1986. Desde muy pequeño mostró
             un interés por la música, ya que desde edad temprana
             comenzó a involucrarse en actividades relacionadas con ésta, participando en festivales escolares, coros,
             entre otros. No obstante, fue hasta los 15 años cuando tuvo la oportunidad de comenzar sus primeros estudios
@@ -107,7 +107,7 @@
             entre muchas otras más.
 
           </p>
-          <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button>
+          <!-- <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button> -->
         </div>
         <button class="regresar-btn" onclick="location.href='./conocenos'">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -170,20 +170,6 @@
     <p>© 2024 Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function toggleBiografia() {
-      const textoBiografia = document.querySelector(".biografia-texto");
-      const boton = document.getElementById("toggle-biografia");
-
-      textoBiografia.classList.toggle("expandido");
-
-      if (textoBiografia.classList.contains("expandido")) {
-        boton.innerText = "Leer menos";
-      } else {
-        boton.innerText = "Leer más";
-      }
-    }
-  </script>
 </body>
 
 </html>

@@ -70,7 +70,7 @@
 
         <div class="biografia-integrante">
           <h3>Biografia</h3>
-          <p class="biografia-texto">Jorge Ángel Ibarra Alvarado, nació el 29 de marzo del 2002 en Aguascalientes, México. Y en la actualidad vive la comunidad del Copetillo, Villa García, Zacatecas, lugar donde se ha desarrollado toda su vida.
+          <p class="biografia-texto"> <strong>Jorge Ángel Ibarra Alvarado</strong>,nació el 29 de marzo del 2002 en Aguascalientes, México. Y en la actualidad vive la comunidad del Copetillo, Villa García, Zacatecas, lugar donde se ha desarrollado toda su vida.
             Sus estudios académicos fueron en el Municipio de Villa García Zacatecas, donde culminaron hasta el Nivel Medio Superior, puesto que ya le interesaba dedicarse de tiempo completo a la carrera de músico profesional, por lo que decide dejar de lado la escuela, para ingresar de lleno a la música. 
             Desde los 12 años comenzó a tocar saxofón con su padre Jorge Ibarra Verdeja, saxofonista del “Conjunto Invensible” de Aguascalientes, siendo ésta la principal influencia que le llevó a elegir este instrumento y sobre todo el estilo del género norteño-sax.
             Sus primeras grabaciones musicales las hizo con el “conjunto imperio” en el 2017, siendo su primer encuentro en estudios de grabación profesional, en el Álbum titulado “Y cómo le digo”. De igual manera participó en otra agrupación zacatecana de gran trayectoria, llamados Los “Super Ranger´s”, grupo de estilo norteño-sax, con el cual permaneció alrededor de un año.
@@ -79,7 +79,7 @@
             Finalmente, Jorge Ángel también es participe de la grabación de  los más recientes temas del E.P. 2023 que lleva por nombre REINVENTADO, entre los que destacan “con qué se pega un corazón”, “enloquecido”, “yo quisiera”, entre otros, que lanza el Conjunto Zacatecas en todas las plataformas Digitales y redes sociales.  
             
           </p>
-          <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button>
+          <!-- <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button> -->
         </div>
         <button class="regresar-btn" onclick="location.href='./conocenos'">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -139,23 +139,9 @@
         </svg>
       </a>
     </div>
-    <p>© 2024 Todos los derechos reservados</p>
+    <p>©Conjunto Zacatecas 2024. Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function toggleBiografia() {
-      const textoBiografia = document.querySelector(".biografia-texto");
-      const boton = document.getElementById("toggle-biografia");
-
-      textoBiografia.classList.toggle("expandido");
-
-      if (textoBiografia.classList.contains("expandido")) {
-        boton.innerText = "Leer menos";
-      } else {
-        boton.innerText = "Leer más";
-      }
-    }
-  </script>
 </body>
 
 </html>

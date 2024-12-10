@@ -70,7 +70,7 @@
         
         <div class="biografia-integrante">
           <h3>Biografia</h3>
-          <p class="biografia-texto">Armando Ovalle Benítez, nace el 8 de noviembre de 1982 en la ciudad de Zacatecas, México. Cuenta con estudios de Ingiero Agrónomo en la Universidad Autónoma de Zacatecas. Es casado y cuenta con dos hijos.
+          <p class="biografia-texto"> <strong> Armando Ovalle Benítez</strong>,nace el 8 de noviembre de 1982 en la ciudad de Zacatecas, México. Cuenta con estudios de Ingiero Agrónomo en la Universidad Autónoma de Zacatecas. Es casado y cuenta con dos hijos.
             En el ámbito musical es conocido como: Armando Caballero. Es un músico de regional mexicano y otros géneros populares, que cuenta con una trayectoria de poco más de 25 años, en los cuales tiene en su haber 13 discos grabados a la fecha, con diversas agrupaciones como: Trio Alma de Cantera, grupo Nortres, Grupo Zona Centro y actualmente con Conjunto Zacatecas. Asimismo ha participado en varias producciones como músico invitado en agrupaciones como korajje, Mariano y su grupo la dosis, entre otras.  
             Actualmente se desenvuelve como bajista y primera voz en el Conjunto Zacatecas.
             Cabe destacar que Armando ha participado en la grabación de todos los materiales discográficos con los que se cuenta hasta el momento el Conjunto Zacatecas, los cuales llevan por nombre “Mi Pueblo en el Corazón”, “Traspasando Fronteras”, “Tributo a un Zacatecano”, “Corridos del Pueblo”, los sencillos “no se va” y “amor viejo”, temas que fueron lanzados en el mes de octubre de 2022. 
@@ -78,7 +78,7 @@
             Finalmente, también ha tenido participación en los más recientes temas del E.P. 2023 que lleva por nombre REINVENTADO, entre los que destacan “con qué se pega un corazón”, “enloquecido”, “yo quisiera”, “rey de oros” y “popurrí tribalero”, donde dos de estos últimos, fueron grabados con su voz.  
             
           </p>
-          <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button>
+          <!-- <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button> -->
         </div>
         <button class="regresar-btn" onclick="location.href='./conocenos'">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -138,23 +138,9 @@
         </svg>
       </a>
     </div>
-    <p>© 2024 Todos los derechos reservados</p>
+    <p>©Conjunto Zacatecas 2024. Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function toggleBiografia() {
-      const textoBiografia = document.querySelector(".biografia-texto");
-      const boton = document.getElementById("toggle-biografia");
-
-      textoBiografia.classList.toggle("expandido");
-
-      if (textoBiografia.classList.contains("expandido")) {
-        boton.innerText = "Leer menos";
-      } else {
-        boton.innerText = "Leer más";
-      }
-    }
-  </script>
 </body>
 
 </html>

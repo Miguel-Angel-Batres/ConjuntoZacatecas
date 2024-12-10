@@ -70,7 +70,7 @@
 
         <div class="biografia-integrante">
           <h3>Biografia</h3>
-          <p class="biografia-texto"> Nace el 28 de julio de 1980 en la Ciudad de Loreto, Zacatecas. Es el menor de 11 hermanos con quien comparte el gusto por la música, siendo gracias a ellos que comienza a despertarse en él  la inquietud de algún día formar parte de un grupo musical y seguir los pasos de sus hermanos mayores.  
+          <p class="biografia-texto"> <strong>Luis Roberto Perez Hernández</strong>,nace el 28 de julio de 1980 en la Ciudad de Loreto, Zacatecas. Es el menor de 11 hermanos con quien comparte el gusto por la música, siendo gracias a ellos que comienza a despertarse en él  la inquietud de algún día formar parte de un grupo musical y seguir los pasos de sus hermanos mayores.  
             Es en el año de 1993 cuando se le presenta la oportunidad de pertenecer a un grupo musical llamado JUVENTUD, en el cual se inicia como percusionista y segunda voz. Es aquí donde se cumple su sueño de grabar su primer disco y a la vez pisar escenarios importantes, canales de televisión y estaciones de radio. En dicho grupo permanece durante 8 años intercalando la percusión y la batería. 
             Por cuestiones personales nace ahora la inquietud de formar un grupo en sociedad llamado GITANO, el cual resaltaba por la interpretación de diversos géneros musicales, después de 3 años el proyecto llega a su fin, siendo aquí cuando decide continuar y terminar sus estudios como Licenciado en Educación Primaria. Por cuestiones de trabajo se aparta un poco del ambiente grupero. Después de 2 años recibe la invitación de varios grupos en los cuales su estancia no fue tan prolongada.
              Llega el año de 2005 y en conjunto con otros músicos y familiares decide formar un nuevo proyecto personal llamado POKAR MUSICAL siendo aquí donde logra posicionar en el gusto de la gente su estilo versátil de interpretación, al paso de 11 años el proyecto se termina y decide tomar un receso musical. 
@@ -81,7 +81,7 @@
             De igual manera, ha sido participe de la primer gira internacional 2022 del CONJUNTO ZACATECAS por los Estados Unidos, en la que ha visitado las principales ciudades de la Unión Americana, tales como Houston, Dallas, Denver, Chicago, Los Ángeles, San Antonio, Austin, Oklahoma, Atlanta, Raleight, Phoenix, Santa Fe, entre muchas otras más. 
             
           </p>
-          <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button>
+          <!-- <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button> -->
         </div>
         <button class="regresar-btn" onclick="location.href='./conocenos'">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -141,23 +141,9 @@
         </svg>
       </a>
     </div>
-    <p>© 2024 Todos los derechos reservados</p>
+    <p>©Conjunto Zacatecas 2024. Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function toggleBiografia() {
-      const textoBiografia = document.querySelector(".biografia-texto");
-      const boton = document.getElementById("toggle-biografia");
-
-      textoBiografia.classList.toggle("expandido");
-
-      if (textoBiografia.classList.contains("expandido")) {
-        boton.innerText = "Leer menos";
-      } else {
-        boton.innerText = "Leer más";
-      }
-    }
-  </script>
 </body>
 
 </html>

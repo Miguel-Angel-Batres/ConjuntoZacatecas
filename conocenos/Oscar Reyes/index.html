@@ -71,7 +71,7 @@
         <div class="biografia-integrante">
           <h3>Biografia</h3>
           <p class="biografia-texto">
-            Oscar Guillermo Reyes Montoya, nace en la ciudad de Aguascalientes el 5 de septiembre del 2002. Es
+            <strong> Oscar Guillermo Reyes Montoya </strong>,nace en la ciudad de Aguascalientes el 5 de septiembre del 2002. Es
             originario de la comunidad de “Rancho Nuevo”, perteneciente al municipio de Noria de Ángeles, Zacatecas.
             Desde muy temprana edad mostro un interés por la música y se empezó a involucrar en actividades relacionadas
             a ella, tales como los festivales escolares, parodias de música, fiestas patronales, coros, entre otras. A
@@ -100,7 +100,7 @@
             destacan “con qué se pega un corazón”, “enloquecido”, “yo quisiera”, entre otros; los cuales se encuentran
             ya en todas las redes sociales del Conjunto Zacatecas y plataformas digitales.
           </p>
-          <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button>
+          <!-- <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button> -->
         </div>
         <button class="regresar-btn" onclick="location.href='./conocenos'">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -160,23 +160,9 @@
         </svg>
       </a>
     </div>
-    <p>© 2024 Todos los derechos reservados</p>
+    <p>©Conjunto Zacatecas 2024. Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function toggleBiografia() {
-      const textoBiografia = document.querySelector(".biografia-texto");
-      const boton = document.getElementById("toggle-biografia");
-
-      textoBiografia.classList.toggle("expandido");
-
-      if (textoBiografia.classList.contains("expandido")) {
-        boton.innerText = "Leer menos";
-      } else {
-        boton.innerText = "Leer más";
-      }
-    }
-  </script>
 </body>
 
 </html>

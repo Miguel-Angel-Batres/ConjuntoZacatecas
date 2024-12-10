@@ -72,7 +72,7 @@
 
         <div class="biografia-integrante">
           <h3>Biografia</h3>
-          <p class="biografia-texto">Ángel Gabriel Pérez García nace el día 15 de noviembre de 2002 en el municipio de
+          <p class="biografia-texto"> <strong>Ángel Gabriel Pérez García</strong>,nace el día 15 de noviembre de 2002 en el municipio de
             Rincón de Romos, Aguascalientes. Cuenta con la edad de 20 años y es el mayor de 5 hermanos, Actualmente
             cursando su licenciatura en Criminalística y ciencias forenses en la ciudad de Aguascalientes.
             Sus influencias en la música son gracias a su familia paterna y sobre todo a su padre Luis Roberto Pérez
@@ -101,9 +101,11 @@
             REINVENTADO, entre los que destacan “con qué se pega un corazón”, “enloquecido”, “yo quisiera”, “rey de
             oros”, “popurrí tribalero” y malas decisiones.
           </p>
-          <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button>
+          <!-- <button id="toggle-biografia" onclick="toggleBiografia()">Leer más</button> -->
+           
 
         </div>
+
         <button class="regresar-btn" onclick="location.href='./conocenos'">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path fill="currentColor"
@@ -164,23 +166,9 @@
         </svg>
       </a>
     </div>
-    <p>© 2024 Todos los derechos reservados</p>
+    <p>©Conjunto Zacatecas 2024. Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function toggleBiografia() {
-      const textoBiografia = document.querySelector(".biografia-texto");
-      const boton = document.getElementById("toggle-biografia");
-
-      textoBiografia.classList.toggle("expandido");
-
-      if (textoBiografia.classList.contains("expandido")) {
-        boton.innerText = "Leer menos";
-      } else {
-        boton.innerText = "Leer más";
-      }
-    }
-  </script>
 </body>
 
 </html>
