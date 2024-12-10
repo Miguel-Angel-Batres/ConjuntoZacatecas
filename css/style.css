@@ -1052,16 +1052,56 @@ iframe {
   max-width: 90%;
 }
 
-.contacto-contenido h2{
-  margin-bottom: 2rem;
 
+.contacto-contenedor h2{
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  margin: 1rem 1;
 }
+
 
 .botones-formulario {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
   background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .contacto-contenedor {
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    gap: 2rem;
+  }
+
+
+  .botones-formulario {
+    flex-direction: column;
+  }
+
+  .contacto-contenedor form{
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  
+
+  .botones-formulario {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacto-contenedor h2{
+    font-size: 0.1rem;
+  }
+  
 }
 
 #btnCorreo {
@@ -1193,9 +1233,6 @@ iframe {
   gap: 1.5rem;
 }
 
-.contacto-info h2 {
-  margin-bottom: 1rem;
-}
 
 .info-item {
   display: flex;
