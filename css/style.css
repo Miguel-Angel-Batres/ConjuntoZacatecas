@@ -1105,7 +1105,9 @@ iframe {
     gap: 2rem;
   }
 
-
+ .seccion:not(.oculto){
+  grid-template-columns: auto;
+ }
   .botones-formulario {
     flex-direction: column;
   }
