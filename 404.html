@@ -4,15 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conjunto Zacatecas</title>
+    <title>Error 404 - Conjunto Zacatecas</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .error-container {
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 6rem;
+            font-weight: bold;
+            color: #d9534f; /* Rojo suave */
+            margin: 0;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .error-link a {
+            color: #1b56d6; /* Azul */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .error-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-
-    <p>Error 404</p>
-
- 
+    <div class="error-container">
+        <p class="error-title">404</p>
+        <p class="error-message">La página que buscas no fue encontrada.</p>
+        <p class="error-link">
+            <a href="./inicio/">Volver al inicio</a>
+        </p>
+    </div>
 </body>
 
 </html>
