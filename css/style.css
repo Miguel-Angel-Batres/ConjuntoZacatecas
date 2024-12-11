@@ -18,12 +18,14 @@ body {
   min-height: 100vh;
   /* background-color: var(--negro); */
   /* background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
+  background: url(https://blackboxanalog.com/wp-content/uploads/2014/10/black-floral-texture-pattern-design-wallpaper-background.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
-html{
-  background: url(https://blackboxanalog.com/wp-content/uploads/2014/10/black-floral-texture-pattern-design-wallpaper-background.jpg) no-repeat;
+html {
+  height: 100%;
+  margin: 0;
 }
 main {
   display: flex;
