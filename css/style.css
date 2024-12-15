@@ -237,6 +237,7 @@ hr {
 .siguenos {
   margin-bottom: -20px;
   font-weight: bold;
+  font-size: 30px;
 }
 
 .redes_sociales_links {
@@ -376,16 +377,15 @@ hr {
 
 }
 
+
 .detalles-integrante p{
-  font-size: 16px;
+  font-size: 23px;
   margin: 5px 0;
+  
   /* display: inline-flex; */
   /* align-items: center; */
 }
 
-.detalles-integrante p strong {
-  vertical-align: middle; /* Asegura que el texto en negrita esté alineado con el SVG */
-}
 
 .detalles-integrante p svg {
   width: 24px; /* Ajusta el tamaño del SVG si es necesario */
